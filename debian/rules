@@ -8,3 +8,7 @@ QMAKE=qmake-qt4
 
 # Don't use the default /usr/local prefix
 DEB_QMAKE_ARGS="PREFIX=/usr"
+
+install/qtpfsgui::
+	# Extra copyright file
+	rm -f $(DEB_DESTDIR)/usr/share/qtpfsgui/COPYING
