@@ -10,6 +10,19 @@ QMAKE=qmake-qt4
 # Don't use the default /usr/local prefix
 DEB_QMAKE_ARGS="PREFIX=/usr"
 
+NOT_NEEDED=AUTHORS COPYING INSTALL README Changelog
+
 install/qtpfsgui::
-	# Extra copyright file
-	rm -f $(DEB_DESTDIR)/usr/share/qtpfsgui/COPYING
+	# Move the doc where it belongs
+	mkdir -p $(DEB_DESTDIR)/usr/share/doc/qtpfsgui
+	mv $(DEB_DESTDIR)/usr/share/qtpfsgui/html \
+		$(DEB_DESTDIR)/usr/share/doc/qtpfsgui
+
+	# Remove unneeded files
+	for i in $(NOT_NEEDED); do \
+		rm $(DEB_DESTDIR)/usr/share/qtpfsgui/$$i ; \
+	done
+
+	# Should be empty, deleting explicitely with rmdir instead of trashing
+	# it blindly, possibly discarding content added in further releases
+	rmdir $(DEB_DESTDIR)/usr/share/qtpfsgui
