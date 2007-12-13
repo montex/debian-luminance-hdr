@@ -5,7 +5,10 @@ It was downloaded from <http://qtpfsgui.sourceforge.net/>
 
 Upstream Authors:
 
+  Main developer:
     Giuseppe Rota <grota@sourceforge.net>
+
+  Contributors:
     Nicholas Phillips (MTB alignment code)
     Mandus (Mac OS X packager, Norwegian translator)
     Mustafa GÜNAY (Turkish translator)
@@ -21,9 +24,16 @@ Upstream Authors:
     Erik Ouchterlony
     Antoine Latter
 
+  Original developers:
+    Rafal Mantiuk <mantiuk@mpi-sb.mpg.de>
+    Grzegorz Krawczyk <krawczyk@mpi-sb.mpg.de>
+
 Copyright:
 
-    Copyright (C) 2006, 2007 Giuseppe Rota
+    Copyright (C) 2003-2005 Rafal Mantiuk
+    Copyright (C) 2003-2007 Grzegorz Krawczyk
+    Copyright (C) 2006-2007 Giuseppe Rota
+
 
 License:
 
@@ -46,3 +56,75 @@ Public License can be found in `/usr/share/common-licenses/GPL-2'.
 
 The Debian packaging is licensed under the GPL, see above:
  (C) 2007, Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>
+
+
+Files under another license:
+
+src/arch/freebsd/math_private.h
+
+ * Copyright (C) 1993 by Sun Microsystems, Inc. All rights reserved.
+ *
+ * Developed at SunPro, a Sun Microsystems, Inc. business.
+ * Permission to use, copy, modify, and distribute this
+ * software is freely granted, provided that this notice
+
+
+src/arch/freebsd/s_exp2f.c
+
+ * Copyright (c) 2005 David Schultz <das@FreeBSD.ORG>
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+
+
+
+src/FileFormat/pfsindcraw.cpp
+   dcraw.c -- Dave Coffin's raw photo decoder
+   Copyright 1997-2007 by Dave Coffin, dcoffin a cybercom o net
+
+   This is a command-line ANSI C program to convert raw photos from
+   any digital camera on any computer running any operating system.
+
+   Attention!  Some parts of this program are restricted under the
+   terms of the GNU General Public License.  Such code is enclosed
+   in "BEGIN GPL BLOCK" and "END GPL BLOCK" declarations.
+   Any code not declared GPL is free for all uses.
+
+   Starting in Revision 1.237, the code to support Foveon cameras
+   is under GPL.
+
+   To lawfully redistribute dcraw.c, you must either (a) include
+   full source code for all executable files containing restricted
+   functions, (b) remove these functions, re-implement them, or
+   copy them from an earlier, non-GPL Revision of dcraw.c, or (c)
+   purchase a license from the author.
+
+   $Revision: 1.363 $
+   $Date: 2007/01/18 23:57:32 $
+   grota: added a couple of functions to integrate in qtpfsgui
+
+
+
+
+ADDITIONAL:
+ * Copyright (C) 2002-2005 Nicholas Phillips
+ * @author Akiko Yoshida, <yoshida@mpi-sb.mpg.de>
