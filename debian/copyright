@@ -1,0 +1,48 @@
+This package was debianized by Cyril Brulebois
+<cyril.brulebois@enst-bretagne.fr> on Wed, 12 Dec 2007 23:45:44 +0100.
+
+It was downloaded from <http://qtpfsgui.sourceforge.net/>
+
+Upstream Authors:
+
+    Giuseppe Rota <grota@sourceforge.net>
+    Nicholas Phillips (MTB alignment code)
+    Mandus (Mac OS X packager, Norwegian translator)
+    Mustafa GÜNAY (Turkish translator)
+    Douglas E. Warner (fc6 packager and bug reports)
+    Ralph Kaeppeli (German Translator)
+    Jan Gemela (Cezk translator)
+    Ignacy Gawedzki (tiff ldr bugfixes and suggestion)
+    Bertrand Petit (FreeBSD patch)
+    Sloan Poe (found and fixed bug regarding legacy actions signal)
+    Alexandre Prokoudine (gui improvements, desktop integration)
+    Arne Hagenah (various suggestions)
+    Frank Boehme (various suggestions)
+    Erik Ouchterlony
+    Antoine Latter
+
+Copyright:
+
+    Copyright (C) 2006, 2007 Giuseppe Rota
+
+License:
+
+    This package is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This package is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this package; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+
+On Debian systems, the complete text of the GNU General
+Public License can be found in `/usr/share/common-licenses/GPL-2'.
+
+The Debian packaging is licensed under the GPL, see above:
+ (C) 2007, Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>

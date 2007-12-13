@@ -1,0 +1,6 @@
+qtpfsgui (1.8.12-1) unstable; urgency=low
+
+  * Initial release (Closes: #410655).
+
+ -- Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>  Wed, 12 Dec 2007 23:45:44 +0100
+

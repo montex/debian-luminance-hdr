@@ -1,0 +1,30 @@
+Source: qtpfsgui
+Section: graphics
+Priority: extra
+Maintainer: Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>
+Build-Depends: debhelper (>= 5), libqt4-dev, libexiv2-dev, libfftw3-dev
+Standards-Version: 3.7.3
+Homepage: http://qtpfsgui.sourceforge.net/
+Vcs-Git: TODO
+Vcs-Browser: TODO
+
+Package: qtpfsgui
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: graphical user interface providing a workflow for HDR imaging
+ Features:
+  * Create an HDR file from a set of images (formats: JPEG, TIFF 8bit and
+    16bit, RAW) of the same scene taken at different exposure setting.
+  * Save and load HDR images.
+  * Rotate and resize HDR images.
+  * Tonemap HDR images.
+  * Copy exif data between sets of images.
+ .
+ Supported HDR formats:
+  * OpenEXR (extension: exr).
+  * Radiance RGBE (extension: hdr).
+  * Tiff formats: 16bit, 32bit (float) and LogLuv (extension: tiff).
+  * Raw image formats (extension: various).
+  * PFS native format (extension: pfs).
+ .
+ Supported LDR formats: JPEG, PNG, PPM, PBM, TIFF (8 bit).

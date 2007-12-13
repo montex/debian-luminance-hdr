@@ -1,0 +1,2 @@
+?package(qtpfsgui):needs="X11" section="Applications/Graphics"\
+  title="qtpfsgui" command="/usr/bin/qtpfsgui"
