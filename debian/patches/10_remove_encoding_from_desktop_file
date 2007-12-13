@@ -1,0 +1,8 @@
+--- a/qtpfsgui.desktop	2007-12-13 01:26:06.000000000 +0100
++++ b/qtpfsgui.desktop	2007-12-13 01:26:21.000000000 +0100
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Name=Qtpfsgui
+ Name[en_US]=Qtpfsgui
+ GenericName=HDR imaging
