@@ -5,8 +5,8 @@ Maintainer: Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>
 Build-Depends: debhelper (>= 5), cdbs, quilt, libqt4-dev, libexiv2-dev, libfftw3-dev, libopenexr-dev, libtiff4-dev
 Standards-Version: 3.7.3
 Homepage: http://qtpfsgui.sourceforge.net/
-Vcs-Git: TODO
-Vcs-Browser: TODO
+Vcs-Git: git://git.debian.org/git/users/kibi-guest/qtpfsgui.git
+Vcs-Browser: http://git.debian.org/?p=users/kibi-guest/qtpfsgui.git;a=summary
 
 Package: qtpfsgui
 Architecture: any
