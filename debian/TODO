@@ -1,7 +1,6 @@
 TODO for qtpfsgui:
 ------------------
 
-  * Fix the watch file (sourceforge…).
   * Write a tiny manpage.
   * Move Vcs-* to the team's repository once it is created.
   * See whether a link to the GPL should be added to the copyright file.
