@@ -1,2 +1,8 @@
-Fix watch file
-Write a tiny manpage
+TODO for qtpfsgui:
+------------------
+
+  * Fix the watch file (sourceforge…).
+  * Write a tiny manpage.
+  * Move Vcs-* to the team's repository once it is created.
+
+ -- Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>  Fri, 14 Dec 2007 01:33:06 +0100
