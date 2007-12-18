@@ -1,12 +1,13 @@
 Source: qtpfsgui
 Section: graphics
 Priority: extra
-Maintainer: Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>
+Maintainer: Debian PhotoTools Maintainers <pkg-phototools-devel@lists.alioth.debian.org>
+Uploaders: Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>
 Build-Depends: debhelper (>= 5), cdbs, quilt, libqt4-dev, libexiv2-dev, libfftw3-dev, libopenexr-dev, libtiff4-dev
 Standards-Version: 3.7.3
 Homepage: http://qtpfsgui.sourceforge.net/
-Vcs-Git: git://git.debian.org/git/users/kibi-guest/qtpfsgui.git
-Vcs-Browser: http://git.debian.org/?p=users/kibi-guest/qtpfsgui.git;a=summary
+Vcs-Browser: http://git.debian.org/?p=pkg-phototools/qtpfsgui.git;a=summary
+Vcs-Git: git://git.debian.org/git/pkg-phototools/qtpfsgui.git
 
 Package: qtpfsgui
 Architecture: any
