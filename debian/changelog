@@ -5,5 +5,4 @@ qtpfsgui (1.8.12-1) unstable; urgency=low
     upstream desktop file:
      - 10_remove_encoding_from_desktop_file.
 
- -- Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>  Wed, 12 Dec 2007 23:45:44 +0100
-
+ -- Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>  Fri, 14 Dec 2007 02:46:03 +0100
