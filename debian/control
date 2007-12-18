@@ -6,7 +6,7 @@ Uploaders: Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>
 Build-Depends: debhelper (>= 5), cdbs, quilt, libqt4-dev, libexiv2-dev, libfftw3-dev, libopenexr-dev, libtiff4-dev
 Standards-Version: 3.7.3
 Homepage: http://qtpfsgui.sourceforge.net/
-Vcs-Browser: http://git.debian.org/?p=pkg-phototools/qtpfsgui.git;a=summary
+Vcs-Browser: http://git.debian.org/?p=pkg-phototools/qtpfsgui.git
 Vcs-Git: git://git.debian.org/git/pkg-phototools/qtpfsgui.git
 
 Package: qtpfsgui
