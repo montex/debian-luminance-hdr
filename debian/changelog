@@ -1,3 +1,9 @@
+qtpfsgui (1.9.0-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>  Fri, 21 Dec 2007 22:40:59 +0100
+
 qtpfsgui (1.8.12-2) unstable; urgency=low
 
   * Move maintenance to pkg-phototools now that the team has been created
