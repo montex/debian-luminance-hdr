@@ -5,7 +5,8 @@ qtpfsgui (1.8.12-2) unstable; urgency=low
   * Update Vcs-* accordingly.
   * Add a “lrelease-qt4” call in the “makebuilddir” target, so that
     localization files get built, and then later installed. Delete the
-    generated files in the “clean” target.
+    generated files in the “clean” target. Use a stamp file to avoid
+    double-run.
   * No longer “rmdir” the /usr/share/qtpfsgui directory since it is no
     longer empty.
 

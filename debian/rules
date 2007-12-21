@@ -23,10 +23,15 @@ install/qtpfsgui::
 		rm $(DEB_DESTDIR)/usr/share/qtpfsgui/$$i ; \
 	done
 
-makebuilddir/qtpfsgui::
+# Use a stamp-file to avoid double-run
+LOCALIZATION_STAMP=debian/stamp-localization
+
+makebuilddir/qtpfsgui:: $(LOCALIZATION_STAMP)
+$(LOCALIZATION_STAMP):
 	# Generate localization files before qmake is run
 	lrelease-qt4 project.pro
+	touch $@
 
 clean::
 	# Delete generated binary files
-	rm -f i18n/*.qm
+	rm -f i18n/*.qm $(LOCALIZATION_STAMP)
