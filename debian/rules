@@ -23,6 +23,6 @@ install/qtpfsgui::
 		rm $(DEB_DESTDIR)/usr/share/qtpfsgui/$$i ; \
 	done
 
-	# Should be empty, deleting explicitely with rmdir instead of trashing
-	# it blindly, possibly discarding content added in further releases
-	rmdir $(DEB_DESTDIR)/usr/share/qtpfsgui
+makebuilddir/qtpfsgui::
+	# Generate localization files before qmake is run
+	lrelease-qt4 project.pro
