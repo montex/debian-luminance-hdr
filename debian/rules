@@ -11,7 +11,7 @@ QMAKE=qmake-qt4
 DEB_QMAKE_ARGS="PREFIX=/usr"
 
 # No need to install them
-NOT_NEEDED=AUTHORS COPYING INSTALL README Changelog
+NOT_NEEDED=AUTHORS INSTALL LICENSE README Changelog
 
 # Generated manpage
 MANPAGE=debian/qtpfsgui.1
