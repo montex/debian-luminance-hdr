@@ -9,6 +9,10 @@ qtpfsgui (1.8.12-2) unstable; urgency=low
     double-run.
   * No longer “rmdir” the /usr/share/qtpfsgui directory since it is no
     longer empty.
+  * Add a link (through debian/links) from /usr/share/qtpfsgui/COPYING to
+    GPL-2 in common-licenses, since it is used in the “License agreement”
+    tab. Add a TODO item accordingly (upstream uses HTML <pre> tags to
+    format it).
 
  -- Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>  Tue, 18 Dec 2007 16:42:21 +0100
 
