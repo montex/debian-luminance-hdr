@@ -4,7 +4,5 @@ TODO for qtpfsgui:
   * Write a tiny manpage.
   * See whether a link to the GPL should be added to the copyright file.
     Or whether using only this link would make sense.
-  * See with upstream whether it is possible to use a non-modified
-    COPYING file (e.g. a link to GPL-2), without <pre> tags.
 
  -- Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>  Fri, 14 Dec 2007 01:33:06 +0100

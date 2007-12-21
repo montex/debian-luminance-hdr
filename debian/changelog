@@ -3,6 +3,10 @@ qtpfsgui (1.9.0-1) unstable; urgency=low
   * New upstream release.
   * Replace “COPYING” with “LICENSE” in the NOT_NEEDED variable of
     debian/rules, following upstream's renaming.
+  * Update debian/links accordingly.
+  * Delete the matching TODO item since there's no longer needed to have a
+    patched (with HTML tags) license file to get a correct display in the
+    “License agreement” tab.
 
  -- Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>  Fri, 21 Dec 2007 22:40:59 +0100
 
