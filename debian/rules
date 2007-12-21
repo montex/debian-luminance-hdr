@@ -26,3 +26,7 @@ install/qtpfsgui::
 makebuilddir/qtpfsgui::
 	# Generate localization files before qmake is run
 	lrelease-qt4 project.pro
+
+clean::
+	# Delete generated binary files
+	rm -f i18n/*.qm

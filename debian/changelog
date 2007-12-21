@@ -1,11 +1,13 @@
 qtpfsgui (1.8.12-2) unstable; urgency=low
 
-  * Move maintenance to pkg-phototools now that the team has been created on
-    alioth: Maintainer set to the team, put myself in Uploaders.
+  * Move maintenance to pkg-phototools now that the team has been created
+    on alioth: Maintainer set to the team, put myself in Uploaders.
   * Update Vcs-* accordingly.
   * Add a “lrelease-qt4” call in the “makebuilddir” target, so that
-    localization files get built, and then later installed. No longer
-    “rmdir” the /usr/share/qtpfsgui since it is no longer empty.
+    localization files get built, and then later installed. Delete the
+    generated files in the “clean” target.
+  * No longer “rmdir” the /usr/share/qtpfsgui directory since it is no
+    longer empty.
 
  -- Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>  Tue, 18 Dec 2007 16:42:21 +0100
 
