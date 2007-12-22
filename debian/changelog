@@ -18,7 +18,7 @@ qtpfsgui (1.8.12-2) unstable; urgency=low
   * Add a minimal manpage generated from debian/qtpfsgui.pod using
     pod2man.
 
- -- Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>  Tue, 18 Dec 2007 16:42:21 +0100
+ -- Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>  Sat, 22 Dec 2007 18:12:19 +0100
 
 qtpfsgui (1.8.12-1) unstable; urgency=low
 
