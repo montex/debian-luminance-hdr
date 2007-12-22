@@ -10,7 +10,17 @@ QMAKE=qmake-qt4
 # Don't use the default /usr/local prefix
 DEB_QMAKE_ARGS="PREFIX=/usr"
 
+# No need to install them
 NOT_NEEDED=AUTHORS COPYING INSTALL README Changelog
+
+# Generated manpage
+MANPAGE=debian/qtpfsgui.1
+
+build/qtpfsgui::
+	# Build the minimal manpage
+	pod2man --center='Minimal qtpfsgui manpage' \
+		--release=$(DEB_VERSION) \
+		debian/qtpfsgui.pod > $(MANPAGE)
 
 install/qtpfsgui::
 	# Move the doc where it belongs
@@ -23,6 +33,9 @@ install/qtpfsgui::
 		rm $(DEB_DESTDIR)/usr/share/qtpfsgui/$$i ; \
 	done
 
+	# Install the minimal manpage
+	dh_installman $(MANPAGE)
+
 # Use a stamp-file to avoid double-run
 LOCALIZATION_STAMP=debian/stamp-localization
 
@@ -34,4 +47,4 @@ $(LOCALIZATION_STAMP):
 
 clean::
 	# Delete generated binary files
-	rm -f i18n/*.qm $(LOCALIZATION_STAMP)
+	rm -f i18n/*.qm $(LOCALIZATION_STAMP) $(MANPAGE)
