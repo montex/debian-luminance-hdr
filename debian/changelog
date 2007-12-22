@@ -7,6 +7,8 @@ qtpfsgui (1.9.0-1) unstable; urgency=low
   * Delete the matching TODO item since there's no longer needed to have a
     patched (with HTML tags) license file to get a correct display in the
     “License agreement” tab.
+  * Update the gcc4.3 patch (drop the hunk touching src/Libpfs/pfs.cpp):
+     - 20_gcc4.3_includes.
 
  -- Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>  Fri, 21 Dec 2007 22:40:59 +0100
 
