@@ -13,6 +13,8 @@ qtpfsgui (1.8.12-2) unstable; urgency=low
     GPL-2 in common-licenses, since it is used in the “License agreement”
     tab. Add a TODO item accordingly (upstream uses HTML <pre> tags to
     format it).
+  * Add patch to fix FTBFS with gcc 4.3 snapshots:
+     - 20_gcc4.3_includes.
 
  -- Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>  Tue, 18 Dec 2007 16:42:21 +0100
 

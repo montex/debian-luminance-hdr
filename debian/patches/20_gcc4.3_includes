@@ -1,0 +1,30 @@
+--- a/src/Exif/exif_operations.cpp	2007-12-22 17:01:18.000000000 +0100
++++ b/src/Exif/exif_operations.cpp	2007-12-22 17:03:01.000000000 +0100
+@@ -21,6 +21,7 @@
+  * @author Giuseppe Rota <grota@users.sourceforge.net>
+  */
+ 
++#include <cstring>
+ #include <image.hpp>
+ #include <cmath>
+ #include "exif_operations.h"
+--- a/src/Libpfs/pfs.cpp	2007-12-22 16:55:30.000000000 +0100
++++ b/src/Libpfs/pfs.cpp	2007-12-22 16:56:43.000000000 +0100
+@@ -27,6 +27,7 @@
+  * $Id: pfs.cpp,v 1.9 2006/10/26 14:57:54 gkrawczyk Exp $
+  */
+ #include <map>
++#include <cstdlib>
+ 
+ #include "pfs.h"
+ 
+--- a/src/TM_operators/ashikhmin02/tmo_ashikhmin02.cpp	2007-12-22 16:59:15.000000000 +0100
++++ b/src/TM_operators/ashikhmin02/tmo_ashikhmin02.cpp	2007-12-22 16:59:23.000000000 +0100
+@@ -29,6 +29,7 @@
+ #include <iostream>
+ #include <math.h>
+ #include <assert.h>
++#include <cstdlib>
+ 
+ #include "../../Libpfs/array2d.h"
+ #include "tmo_ashikhmin02.h"
