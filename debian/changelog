@@ -9,6 +9,9 @@ qtpfsgui (1.9.0-1) unstable; urgency=low
     “License agreement” tab.
   * Update the gcc4.3 patch (drop the hunk touching src/Libpfs/pfs.cpp):
      - 20_gcc4.3_includes.
+  * Add a link from /usr/share/qtpfsgui/html to the HTML documentation
+    under /usr/share/doc/qtpfsgui/html since the former is used at runtime
+    to display the manual.
 
  -- Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>  Fri, 21 Dec 2007 22:40:59 +0100
 
