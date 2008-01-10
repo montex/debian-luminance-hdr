@@ -13,7 +13,7 @@ qtpfsgui (1.9.0-1) unstable; urgency=low
     under /usr/share/doc/qtpfsgui/html since the former is used at runtime
     to display the manual.
 
- -- Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>  Fri, 21 Dec 2007 22:40:59 +0100
+ -- Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>  Sun, 06 Jan 2008 04:39:36 +0100
 
 qtpfsgui (1.8.12-2) unstable; urgency=low
 
