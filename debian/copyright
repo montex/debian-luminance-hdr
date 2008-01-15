@@ -56,7 +56,7 @@ License:
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
 
 On Debian systems, the complete text of the GNU General Public License
-version 2 can be found in `/usr/share/common-licenses/GPL-2'.
+version 2 can be found in “/usr/share/common-licenses/GPL-2”.
 
 The Debian packaging is licensed under the GPL, see above:
  (C) 2007, Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>
