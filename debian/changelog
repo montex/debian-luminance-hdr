@@ -1,7 +1,12 @@
 qtpfsgui (1.9.0-2) unstable; urgency=low
 
-  * Link to the actual documentation (qtpfsgui/doc -> doc/qtpfsgui),
-    thanks to Julien Valroff (Closes: #460944).
+  * Special thanks to Julien Valroff, who reported the following bugs,
+    along with some patches.
+  * Added patch to allow the use of Hugin's align_image_stack again; its
+    inclusion is pending upstream (Closes: #460716):
+     - 30_align_image_stack_prefix.
+  * Fix the link to embedded documentation: qtpfsgui/doc -> doc/qtpfsgui
+    (Closes: #460944).
 
  -- Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>  Tue, 15 Jan 2008 20:34:05 +0100
 
