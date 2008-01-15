@@ -1,0 +1,14 @@
+--- a/src/HdrCreation/HdrCreationManager.cpp	2008-01-14 09:55:52.000000000 +0100
++++ b/src/HdrCreation/HdrCreationManager.cpp	2008-01-14 09:56:09.000000000 +0100
+@@ -244,9 +244,9 @@
+ 	connect(ais, SIGNAL(error(QProcess::ProcessError)), this, SIGNAL(ais_failed(QProcess::ProcessError)));
+ 	
+ 	#ifdef Q_WS_MAC
+-	ais->start(QCoreApplication::applicationDirPath()+"/align_image_stack", QStringList() << QString("-a") << (filesToRemove.empty() ? fileList : filesToRemove) );
++	ais->start(QCoreApplication::applicationDirPath()+"/align_image_stack", QStringList() << QString("-aaligned_") << (filesToRemove.empty() ? fileList : filesToRemove) );
+ 	#else
+-	ais->start("align_image_stack", QStringList() << QString("-a") << (filesToRemove.empty() ? fileList : filesToRemove) );
++	ais->start("align_image_stack", QStringList() << QString("-aaligned_") << (filesToRemove.empty() ? fileList : filesToRemove) );
+ 	#endif
+ }
+ 
