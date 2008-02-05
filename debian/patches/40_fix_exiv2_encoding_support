@@ -1,0 +1,204 @@
+--- a/src/Batch/batch_dialog.cpp
++++ b/src/Batch/batch_dialog.cpp
+@@ -83,7 +83,7 @@ void BatchTMDialog::add_dir_HDRs() {
+ 	QString dirname=QFileDialog::getExistingDirectory(this, tr("Choose a directory"), RecentDirHDRSetting);
+ 	if (!dirname.isEmpty()) {
+ 		QStringList filters;
+-		filters << "*.exr" << "*.hdr" << "*.pic" << "*.tiff" << "*.tif" << "*.pfs" << "*.crw" << "*.cr2" << "*.nef" << "*.dng" << "*.mrw" << "*.orf" << "*.kdc" << "*.dcr" << "*.arw" << "*.raf" << "*.ptx" << "*.pef" << "*.x3f" << "*.raw";
++		filters << "*.exr" << "*.hdr" << "*.pic" << "*.tiff" << "*.tif" << "*.pfs" << "*.crw" << "*.cr2" << "*.nef" << "*.dng" << "*.mrw" << "*.orf" << "*.kdc" << "*.dcr" << "*.arw" << "*.raf" << "*.ptx" << "*.pef" << "*.x3f" << "*.raw" << "*.sr2";
+ 		QDir chosendir(dirname);
+ 		chosendir.setFilter(QDir::Files);
+ 		chosendir.setNameFilters(filters);
+@@ -96,7 +96,7 @@ void BatchTMDialog::add_dir_HDRs() {
+ 
+ void BatchTMDialog::add_HDRs() {
+ 	QString filetypes = tr("All Hdr formats ");
+-	filetypes += "(*.exr *.hdr *.pic *.tiff *.tif *.pfs *.crw *.cr2 *.nef *.dng *.mrw *.orf *.kdc *.dcr *.arw *.raf *.ptx *.pef *.x3f *.raw)" ;
++	filetypes += "(*.exr *.hdr *.pic *.tiff *.tif *.pfs *.crw *.cr2 *.nef *.dng *.mrw *.orf *.kdc *.dcr *.arw *.raf *.ptx *.pef *.x3f *.raw *.sr2)" ;
+ 	QStringList onlyhdrs=QFileDialog::getOpenFileNames(this, tr("Select the input images"), RecentDirHDRSetting, filetypes);
+ 	add_view_model_HDRs(onlyhdrs);
+ }
+@@ -354,7 +354,8 @@ void BatchTMDialog::newResult(const QImage& newimage, tonemapping_options* opts)
+ 		qDebug("BATCH: newResult: Cannot save to %s",fname.toUtf8().constData());
+ 		add_log_message(tr("ERROR: Cannot save to file: ")+fname);
+ 	} else {
+-		ExifOperations::writeExifData(fname.toStdString(),operations.getExifComment().toStdString());
++		//ExifOperations methods want a std::string, we need to use the QFile::encodeName(QString).constData() trick to cope with utf8 characters.
++		ExifOperations::writeExifData(QFile::encodeName(fname).constData(),operations.getExifComment().toStdString());
+ 		add_log_message(tr("Successfully saved LDR file: ")+fname);
+ 	}
+ 	overallProgressBar->setValue(overallProgressBar->value()+1);
+--- a/src/Common/commandline.cpp
++++ b/src/Common/commandline.cpp
+@@ -405,7 +405,8 @@ void CommandLineInterfaceManager::tonemapTerminated(const QImage& newimage,tonem
+ 		error(qPrintable(tr("ERROR: Cannot save to file: %1").arg(saveLdrFilename)));
+ 	} else {
+ 		TMOptionsOperations operations(tmopts);
+-		ExifOperations::writeExifData(saveLdrFilename.toStdString(),operations.getExifComment().toStdString());
++		//ExifOperations methods want a std::string, we need to use the QFile::encodeName(QString).constData() trick to cope with utf8 characters.
++		ExifOperations::writeExifData(QFile::encodeName(saveLdrFilename).constData(),operations.getExifComment().toStdString());
+ 	}
+ 	emit finishedParsing();
+ }
+--- a/src/HdrCreation/HdrCreationManager.cpp
++++ b/src/HdrCreation/HdrCreationManager.cpp
+@@ -286,7 +286,7 @@ void HdrCreationManager::ais_finished(int exitcode, QProcess::ExitStatus) {
+ 
+ void HdrCreationManager::removeTempFiles() {
+ 	foreach (QString tempfname, filesToRemove) {
+-		//qDebug("removing temp file: %s",qPrintable(tempfname));
++// 		qDebug("removing temp file: %s",qPrintable(tempfname));
+ 		QFile::remove(tempfname);
+ 	}
+ }
+--- a/src/HdrCreation/HdrCreationManager.h
++++ b/src/HdrCreation/HdrCreationManager.h
+@@ -52,8 +52,6 @@ public:
+ 	void loadInputFiles();
+ 	//clear lists used internally
+ 	void clearlists(bool deleteExpotimeAsWell);
+-	//remove temp 8or16 bit tiff files created by dcraw upon raw input.
+-	void removeTempFiles();
+ 
+ 	pfs::Frame* createHdr(bool ag, int iterations);
+ 
+@@ -82,6 +80,9 @@ public:
+ 	void makeSureLDRsHaveAlpha();
+ 	void applyShiftsToImageStack(QList< QPair<int,int> > HV_offsets);
+ 	void cropLDR (QRect ca);
++public slots:
++	//remove temp 8or16 bit tiff files created by dcraw upon raw input.
++	void removeTempFiles();
+ signals:
+ 	void finishedLoadingInputFiles(QStringList filesLackingExif);
+ 	void errorWhileLoading(QString message); //also for !valid size
+--- a/src/HdrWizard/newHdrWizard.cpp
++++ b/src/HdrWizard/newHdrWizard.cpp
+@@ -58,7 +58,7 @@ HdrWizardForm::HdrWizardForm(QWidget *p, qtpfsgui_opts *options) : QDialog(p), o
+ 	connect(tableWidget, SIGNAL(currentCellChanged(int,int,int,int)), this, SLOT(inputHdrFileSelected(int)));
+ 
+ 	connect(NextFinishButton,SIGNAL(clicked()),this,SLOT(NextFinishButtonClicked()));
+-	connect(cancelButton,SIGNAL(clicked()),this,SLOT(cancelButtonClicked()));
++	connect(cancelButton,SIGNAL(clicked()),this,SLOT(reject()));
+ 	connect(pagestack,SIGNAL(currentChanged(int)),this,SLOT(currentPageChangedInto(int)));
+ 
+ 	connect(predefConfigsComboBox,SIGNAL(activated(int)),this,
+@@ -95,14 +95,16 @@ HdrWizardForm::HdrWizardForm(QWidget *p, qtpfsgui_opts *options) : QDialog(p), o
+ 	connect(hdrCreationManager, SIGNAL(finishedAligning()), this, SLOT(finishedAligning()));
+ 	connect(hdrCreationManager, SIGNAL(ais_failed(QProcess::ProcessError)), this, SLOT(ais_failed(QProcess::ProcessError)));
+ 
++	connect(this,SIGNAL(rejected()),hdrCreationManager,SLOT(removeTempFiles()));
++
+ }
+ 
+ void HdrWizardForm::loadImagesButtonClicked() {
+     QString filetypes;
+-    filetypes += tr("All formats (*.jpeg *.jpg *.tiff *.tif *.crw *.cr2 *.nef *.dng *.mrw *.orf *.kdc *.dcr *.arw *.raf *.ptx *.pef *.x3f *.raw);;");
++    filetypes += tr("All formats (*.jpeg *.jpg *.tiff *.tif *.crw *.cr2 *.nef *.dng *.mrw *.orf *.kdc *.dcr *.arw *.raf *.ptx *.pef *.x3f *.raw *.sr2);;");
+     filetypes += tr("JPEG (*.jpeg *.jpg);;");
+     filetypes += tr("TIFF Images (*.tiff *.tif);;");
+-    filetypes += tr("RAW Images (*.crw *.cr2 *.nef *.dng *.mrw *.orf *.kdc *.dcr *.arw *.raf *.ptx *.pef *.x3f *.raw)");
++    filetypes += tr("RAW Images (*.crw *.cr2 *.nef *.dng *.mrw *.orf *.kdc *.dcr *.arw *.raf *.ptx *.pef *.x3f *.raw *.sr2)");
+ 
+     QString RecentDirInputLDRs = settings.value(KEY_RECENT_PATH_LOAD_LDRs_FOR_HDR, QDir::currentPath()).toString();
+ 
+@@ -518,8 +520,3 @@ void HdrWizardForm::keyPressEvent(QKeyEvent *event) {
+ 		emit reject();
+ 	}
+ }
+-
+-void HdrWizardForm::cancelButtonClicked() {
+-	hdrCreationManager->removeTempFiles();
+-	reject();
+-}
+--- a/src/HdrWizard/newHdrWizard.h
++++ b/src/HdrWizard/newHdrWizard.h
+@@ -86,7 +86,6 @@ private slots:
+ 	void saveRespCurveFileButtonClicked();
+ 	void modelComboBoxActivated(int);
+ 	void NextFinishButtonClicked();
+-	void cancelButtonClicked();
+ 	void currentPageChangedInto(int);
+ 	void loadRespCurveFilename(const QString&);
+ 	void editingEVfinished();
+--- a/src/MainWindow/mainWindow.cpp
++++ b/src/MainWindow/mainWindow.cpp
+@@ -134,11 +134,11 @@ void MainGui::fileNewViaWizard() {
+ 
+ void MainGui::fileOpen() {
+ 	QString filetypes = tr("All Hdr formats ");
+-	filetypes += "(*.exr *.hdr *.pic *.tiff *.tif *.pfs *.crw *.cr2 *.nef *.dng *.mrw *.orf *.kdc *.dcr *.arw *.raf *.ptx *.pef *.x3f *.raw);;" ;
++	filetypes += "(*.exr *.hdr *.pic *.tiff *.tif *.pfs *.crw *.cr2 *.nef *.dng *.mrw *.orf *.kdc *.dcr *.arw *.raf *.ptx *.pef *.x3f *.raw *.sr2);;" ;
+ 	filetypes += "OpenEXR (*.exr);;" ;
+ 	filetypes += "Radiance RGBE (*.hdr *.pic);;";
+ 	filetypes += "TIFF Images (*.tiff *.tif);;";
+-	filetypes += "RAW Images (*.crw *.cr2 *.nef *.dng *.mrw *.orf *.kdc *.dcr *.arw *.raf *.ptx *.pef *.x3f *.raw);;";
++	filetypes += "RAW Images (*.crw *.cr2 *.nef *.dng *.mrw *.orf *.kdc *.dcr *.arw *.raf *.ptx *.pef *.x3f *.raw *.sr2);;";
+ 	filetypes += "PFS Stream (*.pfs)";
+ 	QString filename = QFileDialog::getOpenFileName(
+ 			this,
+@@ -543,7 +543,7 @@ void MainGui::aboutQtpfsgui() {
+ 	bool license_file_not_found=true;
+ 	QString docDir = QCoreApplication::applicationDirPath();
+ 	docDir.append("/../Resources");
+-	QStringList paths = QStringList("/usr/share/qtpfsgui") << "/usr/local/share/qtpfsgui" << "./" << docDir << "/Applications/qtpfsgui.app/Contents/Resources";
++	QStringList paths = QStringList("/usr/share/qtpfsgui") << "/usr/local/share/qtpfsgui" << docDir << "/Applications/qtpfsgui.app/Contents/Resources" << "./";
+ 	foreach (QString path,paths) {
+ 		QString fname(path+QString("/LICENSE"));
+ #ifdef WIN32
+--- a/src/Threads/hdrInputLoader.cpp
++++ b/src/Threads/hdrInputLoader.cpp
+@@ -40,7 +40,8 @@ void hdrInputLoader::run() {
+ 		QFileInfo qfi(fname);
+ 
+ 		//get exposure time, -1 is error
+-		float expotime=ExifOperations::obtain_expotime(qfi.filePath().toStdString());
++		//ExifOperations methods want a std::string, we need to use the QFile::encodeName(QString).constData() trick to cope with utf8 characters.
++		float expotime = ExifOperations::obtain_expotime( QFile::encodeName(qfi.filePath()).constData() );
+ 
+ 		QString extension=qfi.suffix().toUpper(); //get filename extension
+ 		//now go and fill the list of image data (real payload)
+--- a/src/Threads/loadHdrThread.cpp
++++ b/src/Threads/loadHdrThread.cpp
+@@ -53,7 +53,7 @@ void LoadHdrThread::run() {
+ 	}
+ 	pfs::Frame* hdrpfsframe = NULL;
+ 	QStringList rawextensions;
+-	rawextensions << "CRW" << "CR2" << "NEF" << "DNG" << "MRW" << "ORF" << "KDC" << "DCR" << "ARW" << "RAF" << "PTX" << "PEF" << "X3F" << "RAW";
++	rawextensions << "CRW" << "CR2" << "NEF" << "DNG" << "MRW" << "ORF" << "KDC" << "DCR" << "ARW" << "RAF" << "PTX" << "PEF" << "X3F" << "RAW" << "SR2";
+ 	QString extension = qfi.suffix().toUpper();
+ 	bool rawinput = (rawextensions.indexOf(extension)!=-1);
+ 	try {
+--- a/src/ToneMappingDialog/tonemappingDialog.cpp
++++ b/src/ToneMappingDialog/tonemappingDialog.cpp
+@@ -155,7 +155,8 @@ void TonemappingWindow::saveLDR() {
+ 				if (format=="jpeg" || format=="jpg") {
+ 					//time to write the exif data...
+ 					LdrViewer* currentLDR = ((LdrViewer*)(workspace->activeWindow()));
+-					ExifOperations::writeExifData( outfname.toStdString(), currentLDR->getExifComment().toStdString() );
++					//ExifOperations methods want a std::string, we need to use the QFile::encodeName(QString).constData() trick to cope with utf8 characters.
++					ExifOperations::writeExifData( QFile::encodeName(outfname).constData(), currentLDR->getExifComment().toStdString() );
+ 				}
+ 			}
+ 		}
+--- a/src/TransplantExif/transplant.cpp
++++ b/src/TransplantExif/transplant.cpp
+@@ -190,7 +190,7 @@ void TransplantExifDialog::remove_right() {
+ }
+ 
+ void TransplantExifDialog::append_left() {
+-	QString filetypes = tr("All Supported formats (*.jpeg *.jpg *.tif *.tiff *.crw *.cr2 *.nef *.dng *.mrw *.orf *.kdc *.dcr *.arw *.ptx *.pef *.x3f *.raw)");
++	QString filetypes = tr("All Supported formats (*.jpeg *.jpg *.tif *.tiff *.crw *.cr2 *.nef *.dng *.mrw *.orf *.kdc *.dcr *.arw *.ptx *.pef *.x3f *.raw *.sr2)");
+ 	QStringList files = QFileDialog::getOpenFileNames(this, tr("Select the input images"), RecentDirEXIFfrom, filetypes );
+ 	if (!files.isEmpty()) {
+ 		QFileInfo qfi(files.at(0));
+@@ -251,7 +251,8 @@ void TransplantExifDialog::transplant_requested() {
+ 	for (; i_source != from.constEnd(); ++i_source, ++i_dest) {
+ 		try {
+ 			add_log_message(*i_source + "-->" + *i_dest);
+-			ExifOperations::copyExifData((*i_source).toStdString(), (*i_dest).toStdString(), checkBox_dont_overwrite->isChecked());
++			//ExifOperations methods want a std::string, we need to use the QFile::encodeName(QString).constData() trick to cope with utf8 characters.
++			ExifOperations::copyExifData(QFile::encodeName((*i_source)).constData(), QFile::encodeName((*i_dest)).constData(), checkBox_dont_overwrite->isChecked());
+ #if QT_VERSION >= 0x040200
+ 			rightlist->item(index)->setBackground(QBrush("#a0ff87"));
+ #endif

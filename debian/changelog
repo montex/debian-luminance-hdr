@@ -1,3 +1,11 @@
+qtpfsgui (1.9.0-3) unstable; urgency=low
+
+  * Add patch to fix encoding troubles with operations on exiv2 data,
+    cherry-picked from upstream, revision 262 (Closes: #460718):
+     - 40_fix_exiv2_encoding_support.
+
+ -- Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>  Tue, 05 Feb 2008 22:01:58 +0100
+
 qtpfsgui (1.9.0-2) unstable; urgency=low
 
   * Special thanks to Julien Valroff, who reported the following bugs,
