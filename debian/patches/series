@@ -1,4 +1,2 @@
 10_remove_encoding_from_desktop_file
 20_gcc4.3_includes
-30_align_image_stack_prefix
-40_fix_exiv2_encoding_support

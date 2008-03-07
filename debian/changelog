@@ -1,6 +1,9 @@
 qtpfsgui (1.9.0-1) unstable; urgency=low
 
   * New upstream release.
+  * Drop merged-upstream (or cherrypicked-from-upstream) patches:
+     - 30_align_image_stack_prefix.
+     - 40_fix_exiv2_encoding_support.
 
  -- Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>  Fri, 07 Mar 2008 23:23:55 +0100
 
