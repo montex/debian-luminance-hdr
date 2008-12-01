@@ -29,14 +29,16 @@ Upstream Authors:
   Developers of pfstmo, on which qtpfsgui is based:
     Grzegorz Krawczyk <krawczyk@mpi-sb.mpg.de>
     Nicholas Phillips <ngphillips@gmail.com>
-    Rafal Mantiuk <mantiuk@mpi-sb.mpg.de>
+    Radoslaw Mantiuk <radoslaw.mantiuk@gmail.com>
+    Rafal Mantiuk <mantiuk@gmail.com>
+    Ed Brambley <E.J.Brambley@damtp.cam.ac.uk>
 
 Copyright:
 
     Copyright (C) 2002-2007 Nicholas Phillips
-    Copyright (C) 2003-2005 Rafal Mantiuk
+    Copyright (C) 2003-2008 Rafal Mantiuk
     Copyright (C) 2003-2007 Grzegorz Krawczyk
-    Copyright (C) 2006-2007 Giuseppe Rota
+    Copyright (C) 2006-2008 Giuseppe Rota
 
 
 License:
