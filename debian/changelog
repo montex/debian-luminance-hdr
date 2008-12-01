@@ -1,3 +1,9 @@
+qtpfsgui (1.9.2-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Cyril Brulebois <kibi@debian.org>  Mon, 01 Dec 2008 04:32:14 +0100
+
 qtpfsgui (1.9.1-1) unstable; urgency=low
 
   * New upstream release.
