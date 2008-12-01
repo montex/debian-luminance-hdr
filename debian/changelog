@@ -3,6 +3,7 @@ qtpfsgui (1.9.2-1) experimental; urgency=low
   * New upstream release.
   * debian/copyright:
      - Update accordingly.
+     - Update my mail address, copyright years.
   * debian/control:
      - Update my mail address.
      - Bump Standards-Version from 3.7.3 to 3.8.0 (no changes needed).

@@ -61,7 +61,7 @@ On Debian systems, the complete text of the GNU General Public License
 version 2 can be found in “/usr/share/common-licenses/GPL-2”.
 
 The Debian packaging is licensed under the GPL, see above:
- (C) 2007, Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>
+ © 2007-2008 Cyril Brulebois <kibi@debian.org>
 
 
 Files: src/arch/freebsd/math_private.h
