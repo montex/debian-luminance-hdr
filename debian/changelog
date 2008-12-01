@@ -1,4 +1,4 @@
-qtpfsgui (1.9.0-1) unstable; urgency=low
+qtpfsgui (1.9.1-1) unstable; urgency=low
 
   * New upstream release.
   * Drop merged-upstream (or cherrypicked-from-upstream) patches:
