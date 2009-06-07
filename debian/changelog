@@ -1,5 +1,6 @@
 qtpfsgui (1.9.3-1) unstable; urgency=low
 
+  [ Cyril Brulebois ]
   * New upstream release (Closes: #530766).
   * debian/copyright:
      - Update accordingly.
@@ -7,6 +8,13 @@ qtpfsgui (1.9.3-1) unstable; urgency=low
      - Get rid of timestamps.
   * Merge changes from experimental.
   * Update my address in the manpage too.
+  * ACK the following patches by fabo, thanks!
+
+  [ Fathi Boudra ]
+  * Add patch to fix documentation search path on Debian system:
+     - 30_fix_documentation_search_path
+  * Add patch to fix desktop file icon (Closes: #509305):
+     - 40_fix_desktop_file_icon
 
  -- Cyril Brulebois <kibi@debian.org>  Sun, 07 Jun 2009 11:56:48 +0200
 

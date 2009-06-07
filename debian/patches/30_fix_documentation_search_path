@@ -1,0 +1,11 @@
+--- a/src/MainWindow/mainWindow.cpp
++++ b/src/MainWindow/mainWindow.cpp
+@@ -423,7 +423,7 @@ void MainGui::openDocumentation() {
+ 	ui.setupUi(help);
+ 	QString docDir = QCoreApplication::applicationDirPath();
+ 	docDir.append("/../Resources/html");
+-	ui.tb->setSearchPaths(QStringList("/usr/share/qtpfsgui/html") << "/usr/local/share/qtpfsgui/html" << "./html" << docDir << "/Applications/qtpfsgui.app/Contents/Resources/html");
++	ui.tb->setSearchPaths(QStringList("/usr/share/doc/qtpfsgui/html") << "/usr/local/share/qtpfsgui/html" << "./html" << docDir << "/Applications/qtpfsgui.app/Contents/Resources/html");
+ 	ui.tb->setSource(QUrl("index.html"));
+ 	help->show();
+ }
