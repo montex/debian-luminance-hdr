@@ -76,5 +76,5 @@ Qtpfsgui was written by Giuseppe Rota and several contributors (see
 also the L<AUTHORS> file).
 
 This manual page was written by Cyril Brulebois
-<cyril.brulebois@enst-bretagne.fr> and is licensed under the same term
+<kibi@debian.org> and is licensed under the same term
 as the package itself.
