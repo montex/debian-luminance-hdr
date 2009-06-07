@@ -11,7 +11,7 @@ Vcs-Git: git://git.debian.org/git/pkg-phototools/qtpfsgui.git
 
 Package: qtpfsgui
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, dcraw
 Description: graphical user interface providing a workflow for HDR imaging
  Features:
   * Create an HDR file from a set of images (formats: JPEG, TIFF 8bit and

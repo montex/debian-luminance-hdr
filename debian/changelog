@@ -9,6 +9,9 @@ qtpfsgui (1.9.3-1) unstable; urgency=low
   * Merge changes from experimental.
   * Update my address in the manpage too.
   * ACK the following patches by fabo, thanks!
+  * Add dcraw to Depends, since this tool is needed, although not
+    mentioned as a dependency in the upstream docs. Thanks to fabo
+    again.
 
   [ Fathi Boudra ]
   * Add patch to fix documentation search path on Debian system:
