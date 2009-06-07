@@ -3,6 +3,8 @@ qtpfsgui (1.9.3-1) experimental; urgency=low
   * New upstream release (Closes: #530766).
   * debian/copyright:
      - Update accordingly.
+  * debian/patches:
+     - Get rid of timestamps.
 
  -- Cyril Brulebois <kibi@debian.org>  Sun, 07 Jun 2009 11:56:48 +0200
 

@@ -1,5 +1,5 @@
---- a/src/Exif/exif_operations.cpp	2007-12-22 18:46:24.000000000 +0100
-+++ b/src/Exif/exif_operations.cpp	2007-12-22 18:46:30.000000000 +0100
+--- a/src/Exif/exif_operations.cpp
++++ b/src/Exif/exif_operations.cpp
 @@ -21,6 +21,7 @@
   * @author Giuseppe Rota <grota@users.sourceforge.net>
   */
@@ -8,8 +8,8 @@
  #include <image.hpp>
  #include <cmath>
  #include "exif_operations.h"
---- a/src/TM_operators/ashikhmin02/tmo_ashikhmin02.cpp	2007-12-22 18:41:54.000000000 +0100
-+++ b/src/TM_operators/ashikhmin02/tmo_ashikhmin02.cpp	2007-12-22 18:42:04.000000000 +0100
+--- a/src/TM_operators/ashikhmin02/tmo_ashikhmin02.cpp
++++ b/src/TM_operators/ashikhmin02/tmo_ashikhmin02.cpp
 @@ -29,6 +29,7 @@
  #include <iostream>
  #include <math.h>
