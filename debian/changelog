@@ -15,6 +15,8 @@ qtpfsgui (1.9.3-1) unstable; urgency=low
   * Add patch to disable some (new) default optimisations: openmp and
     sse2, because I'm not sure they are available on all platforms:
      - 50_disable_opts
+  * debian/control:
+     - Update Standards-Version from 3.8.0 to 3.8.1 (no changes needed).
 
   [ Fathi Boudra ]
   * Add patch to fix documentation search path on Debian system:
