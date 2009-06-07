@@ -12,6 +12,9 @@ qtpfsgui (1.9.3-1) unstable; urgency=low
   * Add dcraw to Depends, since this tool is needed, although not
     mentioned as a dependency in the upstream docs. Thanks to fabo
     again.
+  * Add patch to disable some (new) default optimisations: openmp and
+    sse2, because I'm not sure they are available on all platforms:
+     - 50_disable_opts
 
   [ Fathi Boudra ]
   * Add patch to fix documentation search path on Debian system:
