@@ -17,6 +17,12 @@ qtpfsgui (1.9.3-1) unstable; urgency=low
      - 50_disable_opts
   * debian/control:
      - Update Standards-Version from 3.8.0 to 3.8.1 (no changes needed).
+  * Switch from cdbs to plain debhelper:
+     - Update compat from 5 to 7.
+     - B-D to debhelper (>= 7.0.50) to be able to use overrides.
+     - Use debian/docs and debian/manpages to control dh_* accordingly.
+     - Rework debian/rules.
+     - Drop cdbs from B-D.
 
   [ Fathi Boudra ]
   * Add patch to fix documentation search path on Debian system:

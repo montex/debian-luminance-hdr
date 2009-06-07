@@ -1,50 +1,49 @@
 #!/usr/bin/make -f
 
-include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/rules/patchsys-quilt.mk
-include /usr/share/cdbs/1/class/qmake.mk
+include /usr/share/quilt/quilt.make
 
-# Force using qt4
-QMAKE=qmake-qt4
+# Various variables used later on:
+NOT_NEEDED  = AUTHORS INSTALL LICENSE README Changelog
+DEB_DESTDIR = $(CURDIR)/debian/qtpfsgui
+MANPAGE     = debian/qtpfsgui.1
 
-# Don't use the default /usr/local prefix
-DEB_QMAKE_ARGS="PREFIX=/usr"
+override_dh_auto_configure: $(QUILT_STAMPFN)
+	# Generate localization files before qmake is run:
+	lrelease-qt4 project.pro
+	# Avoid the default /usr/local prefix:
+	qmake-qt4 PREFIX=/usr
 
-# No need to install them
-NOT_NEEDED=AUTHORS INSTALL LICENSE README Changelog
-
-# Generated manpage
-MANPAGE=debian/qtpfsgui.1
-
-build/qtpfsgui::
-	# Build the minimal manpage
+override_dh_auto_build:
+	# Normal auto_build:
+	dh_auto_build
+	# Build the minimal manpage:
 	pod2man --center='Minimal qtpfsgui manpage' \
-		--release=$(DEB_VERSION) \
+		--release='' \
 		debian/qtpfsgui.pod > $(MANPAGE)
 
-install/qtpfsgui::
+override_dh_auto_install:
+	# Install in a subdirectory, not in /:
+	$(MAKE) install INSTALL_ROOT=$(DEB_DESTDIR)
 	# Move the doc where it belongs
 	mkdir -p $(DEB_DESTDIR)/usr/share/doc/qtpfsgui
 	mv $(DEB_DESTDIR)/usr/share/qtpfsgui/html \
 		$(DEB_DESTDIR)/usr/share/doc/qtpfsgui
-
 	# Remove unneeded files
 	for i in $(NOT_NEEDED); do \
 		rm $(DEB_DESTDIR)/usr/share/qtpfsgui/$$i ; \
 	done
 
-	# Install the minimal manpage
-	dh_installman $(MANPAGE)
+override_dh_auto_clean:
+	# Normal auto_clean:
+	dh_auto_clean
+	# Delete generated files:
+	rm -f i18n/*.qm $(MANPAGE)
 
-# Use a stamp-file to avoid double-run
-LOCALIZATION_STAMP=debian/stamp-localization
+clean: unpatch
+	dh $@
 
-makebuilddir/qtpfsgui:: $(LOCALIZATION_STAMP)
-$(LOCALIZATION_STAMP):
-	# Generate localization files before qmake is run
-	lrelease-qt4 project.pro
-	touch $@
+build: patch
+	dh $@
 
-clean::
-	# Delete generated binary files
-	rm -f i18n/*.qm $(LOCALIZATION_STAMP) $(MANPAGE)
+%:
+	dh $@
