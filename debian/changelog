@@ -30,7 +30,7 @@ qtpfsgui (1.9.3-1) unstable; urgency=low
   * Add patch to fix desktop file icon (Closes: #509305):
      - 40_fix_desktop_file_icon
 
- -- Cyril Brulebois <kibi@debian.org>  Sun, 07 Jun 2009 11:56:48 +0200
+ -- Cyril Brulebois <kibi@debian.org>  Sun, 07 Jun 2009 13:35:47 +0200
 
 qtpfsgui (1.9.2-1) experimental; urgency=low
 
