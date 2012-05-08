@@ -3,3 +3,4 @@
 30_fix_documentation_search_path
 40_fix_desktop_file_icon
 50_disable_opts
+60_fix_segfault_536666

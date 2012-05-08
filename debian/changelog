@@ -1,3 +1,10 @@
+qtpfsgui (1.9.3-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fixing segmentation fault when saving a HDR image (closes: #536666).
+
+ -- Giovanni Mascellani <gio@debian.org>  Mon, 30 Aug 2010 23:08:43 +0200
+
 qtpfsgui (1.9.3-1) unstable; urgency=low
 
   [ Cyril Brulebois ]
