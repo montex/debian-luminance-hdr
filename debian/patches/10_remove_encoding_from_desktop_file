@@ -1,8 +1,9 @@
---- a/qtpfsgui.desktop
-+++ b/qtpfsgui.desktop
+diff -Nurbbp luminance-hdr-2.2.1.orig/luminance-hdr.desktop luminance-hdr-2.2.1/luminance-hdr.desktop
+--- luminance-hdr-2.2.1.orig/luminance-hdr.desktop	2012-03-11 21:13:12.000000000 +0100
++++ luminance-hdr-2.2.1/luminance-hdr.desktop	2012-05-12 18:32:53.000000000 +0200
 @@ -1,5 +1,4 @@
  [Desktop Entry]
 -Encoding=UTF-8
- Name=Qtpfsgui
- Name[en_US]=Qtpfsgui
- GenericName=HDR imaging
+ Name=Luminance HDR
+ GenericName=HDR imaging tool
+ GenericName[de]=Workflow für HDR-Bilder

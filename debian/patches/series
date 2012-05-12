@@ -1,6 +1,1 @@
 10_remove_encoding_from_desktop_file
-20_gcc4.3_includes
-30_fix_documentation_search_path
-40_fix_desktop_file_icon
-50_disable_opts
-60_fix_segfault_536666
