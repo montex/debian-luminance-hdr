@@ -5,43 +5,21 @@ NOT_NEEDED  = AUTHORS INSTALL LICENSE README Changelog
 DEB_DESTDIR = $(CURDIR)/debian/luminance-hdr
 MANPAGE     = debian/luminance-hdr.1
 
-override_dh_auto_configure:
-	# Generate localization files before qmake is run:
-	lrelease-qt4 project.pro
-	# Avoid the default /usr/local prefix:
-	qmake-qt4 PREFIX=/usr
-
 override_dh_auto_build:
 	# Normal auto_build:
-	dh_auto_build
+	dh_auto_build --verbose
 	# Build the minimal manpage:
 	pod2man --center='Minimal luminance-hdr manpage' \
 		--release='' \
 		debian/luminance-hdr.pod > $(MANPAGE)
 
 override_dh_auto_install:
-	# Install in a subdirectory, not in /:
-	$(MAKE) install INSTALL_ROOT=$(DEB_DESTDIR)
-	# Move the doc where it belongs
-	mkdir -p $(DEB_DESTDIR)/usr/share/doc/luminance-hdr
-	mv $(DEB_DESTDIR)/usr/share/luminance-hdr/html \
-		$(DEB_DESTDIR)/usr/share/doc/luminance-hdr
+	dh_auto_install --verbose
 	# Remove unneeded files
 	for i in $(NOT_NEEDED); do \
-		rm $(DEB_DESTDIR)/usr/share/luminance-hdr/$$i ; \
+		rm -v $(DEB_DESTDIR)/usr/share/doc/luminance-hdr/$$i ; \
 	done
 
-override_dh_auto_clean:
-	# Normal auto_clean:
-	dh_auto_clean
-	# Delete generated files:
-	rm -f i18n/*.qm $(MANPAGE)
-
-clean:
-	dh $@
-
-build:
-	dh $@
 
 %:
 	dh $@
