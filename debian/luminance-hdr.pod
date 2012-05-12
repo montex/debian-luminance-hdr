@@ -1,16 +1,16 @@
 =head1 NAME
 
-qtpfsgui - GUI offering a workflow for HDR imaging
+luminance-hdr - GUI offering a workflow for HDR imaging
 
 
 =head1 SYNOPSIS
 
-B<qtpfsgui>
+B<luminance-hdr>
 
 
 =head1 DESCRIPTION
 
-Qtpfsgui is an open source graphical user interface application that
+luminance-hdr is an open source graphical user interface application that
 aims to provide a workflow for HDR imaging.
 
 Supported HDR formats:
@@ -72,7 +72,7 @@ Supports internationalization.
 
 =head1 AUTHOR
 
-Qtpfsgui was written by Giuseppe Rota and several contributors (see
+luminance-hdr was written by Giuseppe Rota and several contributors (see
 also the L<AUTHORS> file).
 
 This manual page was written by Cyril Brulebois

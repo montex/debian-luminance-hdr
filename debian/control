@@ -1,4 +1,4 @@
-Source: qtpfsgui
+Source: luminance-hdr
 Section: graphics
 Priority: extra
 Maintainer: Debian PhotoTools Maintainers <pkg-phototools-devel@lists.alioth.debian.org>
@@ -6,10 +6,10 @@ Uploaders: Cyril Brulebois <kibi@debian.org>
 Build-Depends: debhelper (>= 7.0.50), quilt, libqt4-dev, libexiv2-dev, libfftw3-dev, libopenexr-dev, libtiff4-dev
 Standards-Version: 3.8.1
 Homepage: http://qtpfsgui.sourceforge.net/
-Vcs-Browser: http://git.debian.org/?p=pkg-phototools/qtpfsgui.git
-Vcs-Git: git://git.debian.org/git/pkg-phototools/qtpfsgui.git
+Vcs-Browser: http://git.debian.org/?p=pkg-phototools/luminance-hdr.git
+Vcs-Git: git://git.debian.org/git/pkg-phototools/luminance-hdr.git
 
-Package: qtpfsgui
+Package: luminance-hdr
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, dcraw
 Description: graphical user interface providing a workflow for HDR imaging
