@@ -1,13 +1,11 @@
 #!/usr/bin/make -f
 
-include /usr/share/quilt/quilt.make
-
 # Various variables used later on:
 NOT_NEEDED  = AUTHORS INSTALL LICENSE README Changelog
 DEB_DESTDIR = $(CURDIR)/debian/luminance-hdr
 MANPAGE     = debian/luminance-hdr.1
 
-override_dh_auto_configure: $(QUILT_STAMPFN)
+override_dh_auto_configure:
 	# Generate localization files before qmake is run:
 	lrelease-qt4 project.pro
 	# Avoid the default /usr/local prefix:
@@ -39,10 +37,10 @@ override_dh_auto_clean:
 	# Delete generated files:
 	rm -f i18n/*.qm $(MANPAGE)
 
-clean: unpatch
+clean:
 	dh $@
 
-build: patch
+build:
 	dh $@
 
 %:

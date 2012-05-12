@@ -1,7 +1,8 @@
 luminance-hdr (2.2.1-1) unstable; urgency=low
 
   * NOT RELEASED YET
-  * Switch to new upstream name luminance-hdr
+  * Switch to new upstream name luminance-hdr.
+  * Use 3.0 (quilt) format.
 
  -- Andreas Metzler <ametzler@debian.org>  Sat, 12 May 2012 17:52:10 +0200
 
