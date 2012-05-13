@@ -1,7 +1,8 @@
 luminance-hdr (2.2.1-1) unstable; urgency=low
 
   * NOT RELEASED YET
-  * Switch to new upstream name luminance-hdr.
+  * Switch to new upstream name luminance-hdr. Closes: #622240,#563401
+    (LP: #63561)
   * Use 3.0 (quilt) format.
   * Drop patches which do not apply (20_gcc4.3_includes
     30_fix_documentation_search_path 40_fix_desktop_file_icon 50_disable_opts
