@@ -13,7 +13,7 @@ Vcs-Git: git://git.debian.org/git/pkg-phototools/luminance-hdr.git
 
 Package: luminance-hdr
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, dcraw
+Depends: ${shlibs:Depends}, ${misc:Depends}, dcraw, libqt4-sql-sqlite
 Description: graphical user interface providing a workflow for HDR imaging
  Features:
   * Create an HDR file from a set of images (formats: JPEG, TIFF 8bit and
