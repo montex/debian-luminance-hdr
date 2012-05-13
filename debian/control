@@ -31,3 +31,10 @@ Description: graphical user interface providing a workflow for HDR imaging
   * PFS native format (extension: pfs).
  .
  Supported LDR formats: JPEG, PNG, PPM, PBM, TIFF (8 bit).
+
+Package: qtpfsgui
+Architecture: all
+Depends: luminance-hdr
+Section: oldlibs
+Description: luminance-hdr transitional package
+ Empty package to facilitate upgrades, can be safely removed.

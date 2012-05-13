@@ -12,6 +12,8 @@ luminance-hdr (2.2.1-1) unstable; urgency=low
   * [20_usrsharedoc.diff] install to and search for docs in
     /usr/share/doc/luminance-hdr instead if /usr/share/luminance-hdr. Strip
     down debian/rules, this is now basically vanilla cmake.
+  * Provide empty qtpfsgui transitional package to faciliate automatic
+    upgrades.
 
  -- Andreas Metzler <ametzler@debian.org>  Sat, 12 May 2012 17:52:10 +0200
 
