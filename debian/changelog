@@ -18,6 +18,7 @@ luminance-hdr (2.2.1-1) unstable; urgency=low
   * Enable building with bindnow and -Wl,--as-needed.
   * Add dependency on libqt4-sql-sqlite.
   * Do not ship unused jquery copy.
+  * Register manual with doc-base.
 
  -- Andreas Metzler <ametzler@debian.org>  Sat, 12 May 2012 17:52:10 +0200
 
