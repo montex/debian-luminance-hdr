@@ -14,6 +14,7 @@ luminance-hdr (2.2.1-1) unstable; urgency=low
     down debian/rules, this is now basically vanilla cmake.
   * Provide empty qtpfsgui transitional package to faciliate automatic
     upgrades.
+  * Use dh v9 level.
 
  -- Andreas Metzler <ametzler@debian.org>  Sat, 12 May 2012 17:52:10 +0200
 
