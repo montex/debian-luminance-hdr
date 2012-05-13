@@ -6,7 +6,7 @@ Uploaders: Cyril Brulebois <kibi@debian.org>
 Build-Depends: debhelper (>= 7.0.50), libqt4-dev, libexiv2-dev, libfftw3-dev,
  libopenexr-dev, libtiff4-dev, cmake (>= 2.6.0), libqtwebkit-dev, libraw-dev,
  libgsl0-dev
-Standards-Version: 3.8.1
+Standards-Version: 3.9.3
 Homepage: http://qtpfsgui.sourceforge.net/
 Vcs-Browser: http://git.debian.org/?p=pkg-phototools/luminance-hdr.git
 Vcs-Git: git://git.debian.org/git/pkg-phototools/luminance-hdr.git
