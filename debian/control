@@ -34,7 +34,7 @@ Description: graphical user interface providing a workflow for HDR imaging
 
 Package: qtpfsgui
 Architecture: all
-Depends: luminance-hdr
+Depends: luminance-hdr, ${misc:Depends}
 Section: oldlibs
 Description: luminance-hdr transitional package
  Empty package to facilitate upgrades, can be safely removed.
