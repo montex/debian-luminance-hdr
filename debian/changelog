@@ -1,3 +1,11 @@
+luminance-hdr (2.2.1-2) experimental; urgency=low
+
+  * Added patch from upstream code, fixes compilation on non-x86
+    architectures:
+     - 30_fix_build_non_x86
+     
+ -- Leonardo Montecchi <lmontecchi@montex.org>  Thu, 24 May 2012 22:55:47 +0200
+
 luminance-hdr (2.2.1-1) experimental; urgency=low
 
   * Team upload.
