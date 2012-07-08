@@ -4,10 +4,9 @@ Description: Install documentation to /usr/share/doc
 Author: Andreas Metzler <ametzler@debian.org>
 Last-Update: 2012-05-12
 
-diff -NurbBp luminance-hdr-2.2.1.orig/CMakeLists.txt luminance-hdr-2.2.1/CMakeLists.txt
---- luminance-hdr-2.2.1.orig/CMakeLists.txt	2012-03-11 23:57:25.000000000 +0100
-+++ luminance-hdr-2.2.1/CMakeLists.txt	2012-05-12 20:03:43.000000000 +0200
-@@ -250,8 +250,8 @@ ELSEIF(UNIX)
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -260,8 +260,8 @@
      ${CMAKE_SOURCE_DIR}/README
      ${CMAKE_SOURCE_DIR}/LICENSE
      ${CMAKE_SOURCE_DIR}/Changelog
@@ -18,15 +17,14 @@ diff -NurbBp luminance-hdr-2.2.1.orig/CMakeLists.txt luminance-hdr-2.2.1/CMakeLi
  # Microsoft Windows
  ELSEIF(WIN32)
      # icon files to copy in the bundle
-diff -NurbBp luminance-hdr-2.2.1.orig/src/HelpBrowser/LuminancePaths.cpp luminance-hdr-2.2.1/src/HelpBrowser/LuminancePaths.cpp
---- luminance-hdr-2.2.1.orig/src/HelpBrowser/LuminancePaths.cpp	2012-03-11 21:13:12.000000000 +0100
-+++ luminance-hdr-2.2.1/src/HelpBrowser/LuminancePaths.cpp	2012-05-12 20:04:00.000000000 +0200
-@@ -38,7 +38,7 @@ QString LuminancePaths::HelpDir()
-   hf = LocalizedDirPath("/usr/local/share/doc/luminance-hdr/");
- #else
-   //	hf = LocalizedDirPath( PREFIX + dirsep + "share" + dirsep + "fontmatrix" + dirsep + "help" + dirsep );
--  hf = LocalizedDirPath("/usr" + dirsep + "share" + dirsep + "luminance-hdr" + dirsep + "help" + dirsep);
-+  hf = LocalizedDirPath("/usr" + dirsep + "share" + dirsep + "doc" + dirsep +"luminance-hdr" + dirsep + "help" + dirsep);
- #endif
-   
- 	getThis()->LuminancePathsDB["HelpDir"] = hf;
+--- a/CMakeGlobal.txt
++++ b/CMakeGlobal.txt
+@@ -11,7 +11,7 @@
+ #ADD_DEFINITIONS(-DPREFIX=${CMAKE_INSTALL_PREFIX})
+ #ADD_DEFINITIONS(-DI18NDIR="${CMAKE_INSTALL_PREFIX}/share/luminance-hdr/i18n")
+ SET(I18NDIR "\"${CMAKE_INSTALL_PREFIX}/share/luminance-hdr/i18n\"")
+-SET(HELPDIR "\"${CMAKE_INSTALL_PREFIX}/share/luminance-hdr/help\"")
++SET(HELPDIR "\"${CMAKE_INSTALL_PREFIX}/share/doc/luminance-hdr/help\"")
+ ELSEIF(WIN32)
+ #ADD_DEFINITIONS(-DI18NDIR=QCoreApplication::applicationDirPath\(\)+"/i18n")
+ SET(I18NDIR QCoreApplication::applicationDirPath\(\)+"/i18n")
