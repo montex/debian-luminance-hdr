@@ -1,6 +1,8 @@
 luminance-hdr (2.3.0-1) unstable; urgency=low
 
   * New upstream release
+  * Dropped patch 30_fix_build_non_x86 which is now in upstream code
+  * Modified patch 20_usrsharedoc.diff which did not apply
 
  -- Leonardo Montecchi <lmontecchi@montex.org>  Sun, 08 Jul 2012 22:23:17 +0200
 
