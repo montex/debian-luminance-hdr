@@ -5,7 +5,7 @@ Maintainer: Debian PhotoTools Maintainers <pkg-phototools-devel@lists.alioth.deb
 Uploaders: Andreas Metzler <ametzler@debian.org>,
  Leonardo Montecchi <lmontecchi@montex.org>
 Build-Depends: debhelper (>= 9), libqt4-dev, libexiv2-dev, libfftw3-dev,
- libopenexr-dev, libtiff5-dev, cmake (>= 2.6.0), libqtwebkit-dev, libraw-dev,
+ libopenexr-dev, libtiff-dev, cmake (>= 2.6.0), libqtwebkit-dev, libraw-dev,
  libgsl0-dev
 Standards-Version: 3.9.3
 Homepage: http://qtpfsgui.sourceforge.net/
