@@ -3,8 +3,11 @@ luminance-hdr (2.3.0-1) unstable; urgency=low
   * New upstream release
   * Dropped patch 30_fix_build_non_x86 which is now in upstream code
   * Modified patch 20_usrsharedoc.diff which did not apply
-  * Add build-depency on libpng-dev.
+  * Add build-dependency on libpng-dev.
   * Build-depend on libtiff-dev instead of libtiff4-dev.
+  * Add build-dependencies on liblcms2-dev and libjpeg-dev. (These are
+    already pulled in by libraw-dev and libtiff(4)-dev respectively but are
+    directly required by luminance-hdr, too.)
 
  -- Leonardo Montecchi <lmontecchi@montex.org>  Sun, 08 Jul 2012 22:23:17 +0200
 
