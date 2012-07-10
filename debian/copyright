@@ -202,7 +202,7 @@ Comment: Source code courtesy of Erik Reinhard
 
 Files: src/MainCli/ezETAProgressBar.hpp
 Copyright: Copyright (C) 2011 Remik Ziemlinski
-License: GPLv3+
+License: GPL-3+
 Comment: File taken from ezProgressBar
 
 Files: src/OsIntegration/ecwin7.cpp src/OsIntegration/ecwin7.h
