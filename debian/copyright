@@ -199,3 +199,17 @@ Comment: Source code courtesy of Erik Reinhard
   File taken from:
   http://www.cs.utah.edu/~reinhard/cdrom/source.html
   Port to PFS tools library by Grzegorz Krawczyk <krawczyk@mpi-sb.mpg.de>
+
+Files: src/MainCli/ezETAProgressBar.hpp
+Copyright: Copyright (C) 2011 Remik Ziemlinski
+License: GPLv3+
+Comment: File taken from ezProgressBar
+
+Files: src/OsIntegration/ecwin7.cpp src/OsIntegration/ecwin7.h
+Copyright: Copyright (C) 2010 Emanuele Colombo
+License: GPL-2+
+Comment: EcWin7 - Support library for integrating Windows 7 taskbar features
+
+Files: src/TonemappingOperators/fattal02/pde_fft.cpp
+Copyright: Tino Kluge (tino.kluge@hrz.tu-chemnitz.de)
+License: unknown
