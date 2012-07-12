@@ -212,4 +212,5 @@ Comment: EcWin7 - Support library for integrating Windows 7 taskbar features
 
 Files: src/TonemappingOperators/fattal02/pde_fft.cpp
 Copyright: Tino Kluge (tino.kluge@hrz.tu-chemnitz.de)
-License: unknown
+License: GPL-2+
+Comment: License header added in upstream GIT post 2.3.0.
