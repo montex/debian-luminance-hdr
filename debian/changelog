@@ -1,3 +1,9 @@
+luminance-hdr (2.3.0-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Andreas Metzler <ametzler@debian.org>  Sat, 03 Nov 2012 09:09:25 +0100
+
 luminance-hdr (2.3.0-1) experimental; urgency=low
 
   [ Leonardo Montecchi ]
