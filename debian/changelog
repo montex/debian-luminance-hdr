@@ -1,11 +1,12 @@
 luminance-hdr (2.3.0-3) unstable; urgency=low
 
+  [ Leonardo Montecchi ]
   * Added dependency on hugin-tools, needed for align_image_stack.
     (LP: #420157)
   * Added manpage for luminance-hdr-cli (created from the output of
     'luminance-hdr-cli -h')
 
- -- Leonardo Montecchi <lmontecchi@montex.org>  Tue, 13 Nov 2012 22:13:28 +0100
+ -- Andreas Metzler <ametzler@debian.org>  Sat, 12 Jan 2013 11:07:05 +0100
 
 luminance-hdr (2.3.0-2) unstable; urgency=low
 
