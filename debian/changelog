@@ -1,3 +1,10 @@
+luminance-hdr (2.3.1-1) UNRELEASED; urgency=low
+
+  * New upstream version.
+    + refresh 20_usrsharedoc.diff.
+
+ -- Andreas Metzler <ametzler@debian.org>  Sat, 20 Apr 2013 12:31:23 +0200
+
 luminance-hdr (2.3.0-3) unstable; urgency=low
 
   [ Leonardo Montecchi ]
