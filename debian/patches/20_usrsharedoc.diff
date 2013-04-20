@@ -6,11 +6,13 @@ Last-Update: 2013-04-20
 
 --- luminance-hdr-2.3.1.orig/CMakeLists.txt
 +++ luminance-hdr-2.3.1/CMakeLists.txt
-@@ -256,7 +256,7 @@ ELSEIF(UNIX)
+@@ -255,8 +255,8 @@ ELSEIF(UNIX)
+     ${CMAKE_SOURCE_DIR}/README
      ${CMAKE_SOURCE_DIR}/LICENSE
      ${CMAKE_SOURCE_DIR}/Changelog
-     DESTINATION share/luminance-hdr) #info files
+-    DESTINATION share/luminance-hdr) #info files
 -    INSTALL(DIRECTORY ${CMAKE_SOURCE_DIR}/help DESTINATION share/luminance-hdr) # help directory
++    DESTINATION share/doc/luminance-hdr) #info files
 +    INSTALL(DIRECTORY ${CMAKE_SOURCE_DIR}/help DESTINATION share/doc/luminance-hdr) # help directory
  # Microsoft Windows
  ELSEIF(WIN32)
