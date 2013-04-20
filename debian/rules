@@ -8,6 +8,19 @@ MANPAGE     = debian/luminance-hdr.1
 export DEB_BUILD_MAINT_OPTIONS=hardening=+relro,+bindnow
 export DEB_LDFLAGS_MAINT_APPEND=-Wl,--as-needed
 
+# To enable test-suite build-depend on libgtest-dev and uncomment these lines
+###override_dh_auto_configure:
+###	cp -a /usr/src/gtest local-gtest && \
+###		mkdir local-gtest/debian local-gtest/include && \
+###		cp -a debian/compat debian/control local-gtest/debian && \
+###		cd local-gtest && \
+###		dh_auto_configure --verbose && \
+###		dh_auto_build --verbose && \
+###		ln -s /usr/include/gtest include/ && \
+###		ln -s obj-* lib
+###
+###	dh_auto_configure --verbose -- -DGTEST_ROOT=$(CURDIR)/local-gtest
+
 override_dh_auto_build:
 	# Normal auto_build:
 	dh_auto_build --verbose
