@@ -1,4 +1,4 @@
-luminance-hdr (2.3.1+git20140113-6) UNRELEASED; urgency=low
+luminance-hdr (2.3.1+git20140113-7) UNRELEASED; urgency=low
 
   [ Andreas Metzler ]
   * New upstream version.
@@ -12,8 +12,10 @@ luminance-hdr (2.3.1+git20140113-6) UNRELEASED; urgency=low
   * Add build-dependency on libccfits-dev
   * Refresh patch 20_usrsharedoc.diff
   * Updated manpage for luminance-hdr-cli
+  * Added patch 30_fixiconpath.diff, fixes installation path of icon
+    according to its size.
 
- -- Leonardo Montecchi <lmontecchi@montex.org>  Sun, 26 Jan 2014 18:52:24 +0100
+ -- Leonardo Montecchi <lmontecchi@montex.org>  Sun, 26 Jan 2014 18:53:23 +0100
 
 luminance-hdr (2.3.0-3) unstable; urgency=low
 
