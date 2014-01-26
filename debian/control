@@ -7,7 +7,7 @@ Uploaders: Andreas Metzler <ametzler@debian.org>,
 Build-Depends: debhelper (>= 9), libqt5-dev, libexiv2-dev, libfftw3-dev,
  libopenexr-dev, libtiff-dev, cmake (>= 2.6.0), libqtwebkit-dev, libraw-dev,
  libgsl0-dev, libpng-dev, liblcms2-dev, libjpeg-dev, libboost-dev, libboost-program-options-dev,
- qttools5-dev-tools
+ qttools5-dev-tools, libccfits-dev
 Standards-Version: 3.9.4
 Homepage: http://qtpfsgui.sourceforge.net/
 Vcs-Browser: http://git.debian.org/?p=pkg-phototools/luminance-hdr.git
