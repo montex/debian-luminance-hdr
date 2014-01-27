@@ -1,12 +1,12 @@
-luminance-hdr (2.3.1+git20140113-7) UNRELEASED; urgency=low
+luminance-hdr (2.4.0-1) UNRELEASED; urgency=low
 
   [ Andreas Metzler ]
-  * New upstream version.
+  * New upstream version (2.3.1).
     + refresh 20_usrsharedoc.diff.
     + add build-depends on libboost-dev.
 
   [ Leonardo Montecchi ]
-  * Latest source code from upstream git repository.
+  * New upstream version (2.4.0)
   * Updated build-dependencies and dependencies to Qt5.
   * Add build-dependency on libboost-program-options-dev
   * Add build-dependency on libccfits-dev
@@ -15,7 +15,7 @@ luminance-hdr (2.3.1+git20140113-7) UNRELEASED; urgency=low
   * Added patch 30_fixiconpath.diff, fixes installation path of icon
     according to its size.
 
- -- Leonardo Montecchi <lmontecchi@montex.org>  Sun, 26 Jan 2014 18:53:23 +0100
+ -- Leonardo Montecchi <lmontecchi@montex.org>  Mon, 27 Jan 2014 22:02:50 +0100
 
 luminance-hdr (2.3.0-3) unstable; urgency=low
 
