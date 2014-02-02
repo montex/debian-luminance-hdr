@@ -1,10 +1,21 @@
-luminance-hdr (2.3.1-1) UNRELEASED; urgency=low
+luminance-hdr (2.4.0-1) UNRELEASED; urgency=low
 
-  * New upstream version.
+  [ Andreas Metzler ]
+  * New upstream version (2.3.1).
     + refresh 20_usrsharedoc.diff.
     + add build-depends on libboost-dev.
 
- -- Andreas Metzler <ametzler@debian.org>  Sat, 20 Apr 2013 12:31:23 +0200
+  [ Leonardo Montecchi ]
+  * New upstream version (2.4.0)
+  * Updated build-dependencies and dependencies to Qt5.
+  * Add build-dependency on libboost-program-options-dev
+  * Add build-dependency on libccfits-dev
+  * Refresh patch 20_usrsharedoc.diff
+  * Updated manpage for luminance-hdr-cli
+  * Added patch 30_fixiconpath.diff, fixes installation path of icon
+    according to its size.
+
+ -- Leonardo Montecchi <lmontecchi@montex.org>  Mon, 27 Jan 2014 22:02:50 +0100
 
 luminance-hdr (2.3.0-3) unstable; urgency=low
 

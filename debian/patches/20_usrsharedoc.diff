@@ -2,11 +2,11 @@ Description: Install documentation to /usr/share/doc
  Install docs to /usr/share/doc/luminance-hdr instead of
  /usr/share/luminance-hdr
 Author: Andreas Metzler <ametzler@debian.org>
-Last-Update: 2013-04-20
+Last-Update: 2014-01-24
 
---- luminance-hdr-2.3.1.orig/CMakeLists.txt
-+++ luminance-hdr-2.3.1/CMakeLists.txt
-@@ -255,8 +255,8 @@ ELSEIF(UNIX)
+--- luminance-hdr.orig/CMakeLists.txt
++++ luminance-hdr/CMakeLists.txt
+@@ -277,8 +277,8 @@
      ${CMAKE_SOURCE_DIR}/README
      ${CMAKE_SOURCE_DIR}/LICENSE
      ${CMAKE_SOURCE_DIR}/Changelog
@@ -17,11 +17,11 @@ Last-Update: 2013-04-20
  # Microsoft Windows
  ELSEIF(WIN32)
      # icon files to copy in the bundle
---- luminance-hdr-2.3.1.orig/cmake/Internationalization.cmake
-+++ luminance-hdr-2.3.1/cmake/Internationalization.cmake
-@@ -6,7 +6,7 @@ ELSEIF(UNIX)
- # ADD_DEFINITIONS(-DPREFIX=${CMAKE_INSTALL_PREFIX})
+--- luminance-hdr.orig/cmake/Internationalization.cmake
++++ luminance-hdr/cmake/Internationalization.cmake
+@@ -7,7 +7,7 @@
  # ADD_DEFINITIONS(-DI18NDIR="${CMAKE_INSTALL_PREFIX}/share/luminance-hdr/i18n")
+ SET(BASEDIR "\"${CMAKE_INSTALL_PREFIX}\"")
  SET(I18NDIR "\"${CMAKE_INSTALL_PREFIX}/share/luminance-hdr/i18n\"")
 -SET(HELPDIR "\"${CMAKE_INSTALL_PREFIX}/share/luminance-hdr/help\"")
 +SET(HELPDIR "\"${CMAKE_INSTALL_PREFIX}/share/doc/luminance-hdr/help\"")
