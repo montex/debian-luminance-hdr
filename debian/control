@@ -4,10 +4,12 @@ Priority: extra
 Maintainer: Debian PhotoTools Maintainers <pkg-phototools-devel@lists.alioth.debian.org>
 Uploaders: Andreas Metzler <ametzler@debian.org>,
  Leonardo Montecchi <lmontecchi@montex.org>
-Build-Depends: debhelper (>= 9), libqt5-dev, libexiv2-dev, libfftw3-dev,
- libopenexr-dev, libtiff-dev, cmake (>= 2.6.0), libqtwebkit-dev, libraw-dev,
- libgsl0-dev, libpng-dev, liblcms2-dev, libjpeg-dev, libboost-dev, libboost-program-options-dev,
- qttools5-dev-tools, libccfits-dev
+Build-Depends: 
+ cmake (>= 2.6.0), debhelper (>= 9), libboost-dev,
+ libboost-program-options-dev, libccfits-dev, libexiv2-dev,
+ libfftw3-dev, libgsl0-dev, libjpeg-dev, liblcms2-dev, libopenexr-dev,
+ libpng-dev, libqt5-dev, libqtwebkit-dev, libraw-dev, libtiff-dev,
+ qttools5-dev-tools
 Standards-Version: 3.9.4
 Homepage: http://qtpfsgui.sourceforge.net/
 Vcs-Browser: http://git.debian.org/?p=pkg-phototools/luminance-hdr.git
@@ -15,7 +17,8 @@ Vcs-Git: git://git.debian.org/git/pkg-phototools/luminance-hdr.git
 
 Package: luminance-hdr
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, dcraw, libqt5sql5-sqlite, hugin-tools
+Depends: dcraw, hugin-tools, libqt5sql5-sqlite,
+ ${shlibs:Depends}, ${misc:Depends},
 Description: graphical user interface providing a workflow for HDR imaging
  Features:
   * Create an HDR file from a set of images (formats: JPEG, TIFF 8bit and
