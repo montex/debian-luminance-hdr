@@ -17,6 +17,7 @@ luminance-hdr (2.4.0-1) UNRELEASED; urgency=low
 
   [ Lisandro Damián Nica ]
   * Build-Depend on specific qt submodules instead of libqt5-dev.
+  * Select QT5 by adding export QT_SELECT := qt5 to debian/rules.
 
  -- Leonardo Montecchi <lmontecchi@montex.org>  Mon, 27 Jan 2014 22:02:50 +0100
 
