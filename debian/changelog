@@ -4,6 +4,7 @@ luminance-hdr (2.4.0-1) UNRELEASED; urgency=low
   * New upstream version (2.3.1).
     + refresh 20_usrsharedoc.diff.
     + add build-depends on libboost-dev.
+  * Version build dep on qttools5-dev >= 5.2.1-7 because of #738196.
 
   [ Leonardo Montecchi ]
   * New upstream version (2.4.0)
@@ -14,7 +15,6 @@ luminance-hdr (2.4.0-1) UNRELEASED; urgency=low
   * Updated manpage for luminance-hdr-cli
   * Added patch 30_fixiconpath.diff, fixes installation path of icon
     according to its size.
-  * Version build dep on qttools5-dev >= 5.2.1-7 because of #738196.
 
   [ Lisandro Damián Nica ]
   * Build-Depend on specific qt submodules instead of libqt5-dev.
