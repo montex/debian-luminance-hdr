@@ -10,7 +10,7 @@ Build-Depends: cmake (>= 2.6.0), debhelper (>= 9), libboost-dev,
  libqt5webkit5-dev, libraw-dev, libtiff-dev, qtbase5-dev,
  qtdeclarative5-dev, qtquick1-5-dev, qtscript5-dev, 
  qttools5-dev (>= 5.2.1-7), qttools5-dev-tools
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Homepage: http://qtpfsgui.sourceforge.net/
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-phototools/luminance-hdr.git
 Vcs-Git: git://anonscm.debian.org/pkg-phototools/luminance-hdr.git
