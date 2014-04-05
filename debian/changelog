@@ -1,8 +1,7 @@
 luminance-hdr (2.4.0-1) UNRELEASED; urgency=low
 
   [ Andreas Metzler ]
-  * New upstream version (2.3.1).
-    + refresh 20_usrsharedoc.diff.
+  * New upstream version (2.4.0).
     + add build-depends on libboost-dev.
   * Version build dep on qttools5-dev >= 5.2.1-7 because of #738196.
   * Point Vcs-* to anonscm.d.o.
