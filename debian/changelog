@@ -1,4 +1,4 @@
-luminance-hdr (2.4.0-1) UNRELEASED; urgency=low
+luminance-hdr (2.4.0-1) experimental; urgency=low
 
   [ Andreas Metzler ]
   * New upstream version (2.4.0).
@@ -20,7 +20,7 @@ luminance-hdr (2.4.0-1) UNRELEASED; urgency=low
   * Build-Depend on specific qt submodules instead of libqt5-dev.
   * Select QT5 by adding export QT_SELECT := qt5 to debian/rules.
 
- -- Leonardo Montecchi <lmontecchi@montex.org>  Mon, 27 Jan 2014 22:02:50 +0100
+ -- Andreas Metzler <ametzler@debian.org>  Sat, 05 Apr 2014 13:31:56 +0200
 
 luminance-hdr (2.3.0-3) unstable; urgency=low
 
