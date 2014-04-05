@@ -75,6 +75,8 @@ Copyright:
   Copyright (C) 2011 Davide Anastasia
   Copyright (C) 2011 Franco Comida
   Copyright (C) 2012 Davide Anastasia
+  Copyright (C) 2013 Davide Anastasia
+  Copyright (C) 2013 Franco Comida
   Copyright Iowa State University 2009-2010.
   Pierre Marchand <pierremarc@oep-h.com>, (C) 2008
 
@@ -180,6 +182,18 @@ Files: src/TonemappingOperators/mantiuk08/cqp/*
 Copyright: 2006-2008 Ewgenij Hübner
 License: GPL-2+
 
+Files: cmake/FindCCfits.cmake
+Copyright: (c) 2012 Brian Kloppenborg
+License: GPL-3+
+
+Files: cmake/FindCFITSIO.cmake
+Copyright: (c) 2006, Jasem Mutlaq <mutlaqja@ikarustech.com>
+ Based on FindLibfacile by Carsten Niehaus, <cniehaus@gmx.de>
+License: BSD-3-clause
+
+Files: cmake/FindOpenEXR.cmake
+Copyright: 2011 Blender Foundation.
+License: BSD-3-clause
 
 
 License: GPL-2+_qt3
