@@ -1,0 +1,17 @@
+Description: Stop hardcoding -msse2 -msse
+ This breaks on non-x86 architectures, is not allowed on Debian i386
+ and useless on amd64.
+Origin: vendor
+Forwarded: https://sourceforge.net/p/qtpfsgui/bugs/201/
+Last-Update: 2014-04-05
+
+--- luminance-hdr-2.4.0.orig/cmake/CompilerSettings.cmake
++++ luminance-hdr-2.4.0/cmake/CompilerSettings.cmake
+@@ -1,6 +1,6 @@
+ IF(UNIX)
+ ADD_DEFINITIONS(-Wall -Wno-unknown-pragmas)
+-ADD_DEFINITIONS(-ffast-math -msse2 -msse)
++ADD_DEFINITIONS(-ffast-math)
+ 
+ IF(APPLE)
+ # optimize for 64-bit core 2 architecture on Apple

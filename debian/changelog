@@ -1,3 +1,10 @@
+luminance-hdr (2.4.0-2) experimental; urgency=medium
+
+  * 40_donotforce_sse.diff: Stop setting -msse2 -msse to fix build error on
+    non-x86 archs.
+
+ -- Andreas Metzler <ametzler@debian.org>  Sun, 06 Apr 2014 18:39:33 +0200
+
 luminance-hdr (2.4.0-1) experimental; urgency=low
 
   [ Andreas Metzler ]

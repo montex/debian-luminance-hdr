@@ -1,3 +1,4 @@
 10_remove_encoding_from_desktop_file
 20_usrsharedoc.diff
 30_fixiconpath.diff
+40_donotforce_sse.diff
