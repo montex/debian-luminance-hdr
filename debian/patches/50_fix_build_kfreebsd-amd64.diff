@@ -1,0 +1,19 @@
+Description: Workaround to fix compilation under kfreebsd-amd64
+  This patch is workaround to fix a compilation error under kfreebsd-amd64
+  Includes <cerrno> on top in order to avoid the inclusion of <errno.h>.
+Author: Leonardo Montecchi <lmontecchi@montex.org>
+Last-Update: <2014-04-08>
+
+--- luminance-hdr-2.4.0.orig/src/TonemappingOperators/mantiuk08/display_function.h
++++ luminance-hdr-2.4.0/src/TonemappingOperators/mantiuk08/display_function.h
+@@ -32,6 +32,10 @@
+ #ifndef DISPLAY_FUNCTION_H
+ #define DISPLAY_FUNCTION_H
+ 
++#if defined(__FreeBSD_kernel__) && __x86_64__
++#include <cerrno>       // Fixes compilation on kfreebsd-amd64 on Debian
++#endif
++
+ #include <cstdio>
+ 
+ #include "arch/math.h"

@@ -2,6 +2,7 @@ luminance-hdr (2.4.0-3) UNRELEASED; urgency=medium
 
   [ Leonardo Montecchi ]
   * Requires cmake 2.8.11, bump build-depends.
+  * 50_fix_build_kfreebsd-amd64.diff: Workaround for FTBFS on kfreebsd-amd64.
 
  -- Andreas Metzler <ametzler@debian.org>  Sat, 12 Apr 2014 12:44:31 +0200
 
