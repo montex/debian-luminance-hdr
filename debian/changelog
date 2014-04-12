@@ -1,3 +1,10 @@
+luminance-hdr (2.4.0-3) UNRELEASED; urgency=medium
+
+  [ Leonardo Montecchi ]
+  * Requires cmake 2.8.11, bump build-depends.
+
+ -- Andreas Metzler <ametzler@debian.org>  Sat, 12 Apr 2014 12:44:31 +0200
+
 luminance-hdr (2.4.0-2) experimental; urgency=medium
 
   * 40_donotforce_sse.diff: Stop setting -msse2 -msse to fix build error on
