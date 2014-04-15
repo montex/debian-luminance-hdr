@@ -1,3 +1,9 @@
+luminance-hdr (2.4.0-4) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Andreas Metzler <ametzler@debian.org>  Tue, 15 Apr 2014 19:09:29 +0200
+
 luminance-hdr (2.4.0-3) experimental; urgency=medium
 
   [ Leonardo Montecchi ]
