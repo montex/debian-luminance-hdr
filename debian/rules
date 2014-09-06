@@ -24,7 +24,7 @@ export QT_SELECT := qt5
 
 override_dh_auto_build:
 	# Normal auto_build:
-	dh_auto_build --verbose
+	dh_auto_build --verbose --parallel
 	# Build the minimal manpage:
 	pod2man --center='Minimal luminance-hdr manpage' \
 		--release='' \
@@ -38,4 +38,4 @@ override_dh_auto_install:
 	done
 
 %:
-	dh $@
+	dh $@ --parallel
