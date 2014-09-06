@@ -1,11 +1,11 @@
-luminance-hdr (2.4.0-5) UNRELEASED; urgency=medium
+luminance-hdr (2.4.0-5) unstable; urgency=medium
 
   * Add build-dependency on pkg-config. (Thanks, Pino Toscano)
     Closes: #759115
   * Enable parallel build. (Thanks, Pino Toscano)
     Closes: #759119
 
- -- Andreas Metzler <ametzler@debian.org>  Sat, 06 Sep 2014 14:43:55 +0200
+ -- Andreas Metzler <ametzler@debian.org>  Sat, 06 Sep 2014 15:05:38 +0200
 
 luminance-hdr (2.4.0-4) unstable; urgency=medium
 
