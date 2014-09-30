@@ -3,3 +3,4 @@
 30_fixiconpath.diff
 40_donotforce_sse.diff
 50_fix_build_kfreebsd-amd64.diff
+51_qt5_printsupport.diff
