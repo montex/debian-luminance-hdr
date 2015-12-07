@@ -4,6 +4,9 @@ luminance-hdr (2.4.0-7) unstable; urgency=medium
   * Update build dependencies for GSL 2, change libgsl0-dev to libgsl-dev.
     Closes: #807209
 
+  [ Andreas Metzler ]
+  * [lintian] Fix typo in debian/copyright.
+
  -- Andreas Metzler <ametzler@debian.org>  Mon, 07 Dec 2015 08:11:55 +0100
 
 luminance-hdr (2.4.0-6) unstable; urgency=medium
