@@ -1,8 +1,10 @@
-luminance-hdr (2.4.0-8) UNRELEASED; urgency=medium
+luminance-hdr (2.4.0-8) unstable; urgency=medium
 
   * Move Vcs-* from git/http to https.
+  * 52_drop_Qt5Declarative_dep.diff / debian/control: Drop unused
+    build-dependency on qtquick1-5-dev. Closes: #810627
 
- -- Andreas Metzler <ametzler@debian.org>  Sun, 10 Jan 2016 13:39:16 +0100
+ -- Andreas Metzler <ametzler@debian.org>  Sat, 16 Jan 2016 12:03:49 +0100
 
 luminance-hdr (2.4.0-7) unstable; urgency=medium
 

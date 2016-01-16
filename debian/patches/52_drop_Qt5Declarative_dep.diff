@@ -1,0 +1,18 @@
+Description: Drop unused dependency.
+ Qt5Declarative (=qtquick1-5-dev) is searched for but not used.
+ See https://github.com/LuminanceHDR/LuminanceHDR/commit/d03b8f547e7be60fc76221736cee5408f1235553
+Author: Andreas Metzler <ametzler@debian.org>
+Origin: vendor
+Bug-Debian: https://bugs.debian.org/810627
+Forwarded: not-needed
+
+--- luminance-hdr-2.4.0.orig/CMakeLists.txt
++++ luminance-hdr-2.4.0/CMakeLists.txt
+@@ -22,7 +22,6 @@ find_package(Qt5Core)
+ find_package(Qt5Concurrent)
+ find_package(Qt5Widgets)
+ find_package(Qt5Gui)
+-find_package(Qt5Declarative)
+ find_package(Qt5WebKit)
+ find_package(Qt5WebKitWidgets)
+ find_package(Qt5Xml)

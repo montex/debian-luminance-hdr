@@ -4,3 +4,4 @@
 40_donotforce_sse.diff
 50_fix_build_kfreebsd-amd64.diff
 51_qt5_printsupport.diff
+52_drop_Qt5Declarative_dep.diff
