@@ -1,2 +1,0 @@
-?package(luminance-hdr):needs="X11" section="Applications/Graphics"\
-  title="luminance-hdr" command="/usr/bin/luminance-hdr"
