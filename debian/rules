@@ -27,7 +27,7 @@ override_dh_auto_build:
 	dh_auto_build --verbose --parallel
 	# Build the minimal manpage:
 	pod2man --center='Minimal luminance-hdr manpage' \
-		--release='' \
+		--release=$(shell dpkg-parsechangelog -S Version | sed -e 's/.*://' -e 's/-[^-][^-]*//') \
 		debian/luminance-hdr.pod > $(MANPAGE)
 
 override_dh_auto_install:

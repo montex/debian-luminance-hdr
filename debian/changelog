@@ -1,3 +1,10 @@
+luminance-hdr (2.4.0-9) UNRELEASED; urgency=medium
+
+  * Pass non-empty argument to pod2man's --release option as required by perl
+    5.24. Closes: #839372
+
+ -- Andreas Metzler <ametzler@debian.org>  Sat, 01 Oct 2016 19:28:34 +0200
+
 luminance-hdr (2.4.0-8) unstable; urgency=medium
 
   * Move Vcs-* from git/http to https.
