@@ -5,7 +5,7 @@ NOT_NEEDED  = AUTHORS INSTALL LICENSE README Changelog
 DEB_DESTDIR = $(CURDIR)/debian/luminance-hdr
 MANPAGE     = debian/luminance-hdr.1
 
-export DEB_BUILD_MAINT_OPTIONS=hardening=+relro,+bindnow
+export DEB_BUILD_MAINT_OPTIONS=hardening=+all
 export DEB_LDFLAGS_MAINT_APPEND=-Wl,--as-needed
 export QT_SELECT := qt5
 
