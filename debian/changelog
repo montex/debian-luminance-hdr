@@ -1,3 +1,9 @@
+luminance-hdr (2.5.1-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- Leonardo Montecchi <lmontecchi@montex.org>  Tue, 16 May 2017 00:33:21 +0200
+
 luminance-hdr (2.4.0-9) unstable; urgency=medium
 
   * Pass non-empty argument to pod2man's --release option as required by perl
