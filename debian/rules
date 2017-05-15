@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 
 # Various variables used later on:
-NOT_NEEDED  = AUTHORS INSTALL LICENSE README Changelog
+NOT_NEEDED  = AUTHORS LICENSE README.md Changelog
 DEB_DESTDIR = $(CURDIR)/debian/luminance-hdr
 MANPAGE     = debian/luminance-hdr.1
 
