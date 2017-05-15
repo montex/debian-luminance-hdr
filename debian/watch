@@ -1,3 +1,4 @@
 version=3
 
-http://sf.net/qtpfsgui/luminance-hdr-([0-9.]+)\.tar\.bz2
+opts=filenamemangle=s/.+\/v?\.?(\d\S+)\.tar\.gz/LuminanceHDR-$1\.tar\.gz/ \
+  https://github.com/LuminanceHDR/LuminanceHDR/tags .*/v?\.?(\d\S+)\.tar\.gz
