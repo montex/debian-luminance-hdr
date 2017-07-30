@@ -41,7 +41,7 @@ get-orig-source:
 	cd $(PKG)-$(VER) && \
 	$(RM) -r -v LuminanceHDR-v.$(UVER)/hdrhtml/hdrhtml_hdrlabs_templ/
 	@echo "# Repacking..."
-	tar -caf "$(PKG)_$(VER)$(DTYPE).orig.tar.gz" --directory $(PKG)-$(VER) LuminanceHDR-v.$(UVER)
+	tar -caf "$(PKG)_$(VER)$(DTYPE).orig.tar.xz" --directory $(PKG)-$(VER) LuminanceHDR-v.$(UVER)
 	rm -r -v $(PKG)-$(VER)
 
 override_dh_auto_build:
