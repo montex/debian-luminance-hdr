@@ -27,6 +27,7 @@ Specify numerical EV values (as many as INPUTFILES).
 HDR creation config. Possible values:
 .IP
 weight=triangular|gaussian|plateau:response_curve=from_file|linear|gamma|log|robertson:model=robertson|debevec:curve_filename=your_file_here.m
+.br
 (Default is weight=triangular:response_curve=linear:model=debevec)
 .TP
 \fB\-l\fR \fB\-\-load\fR HDR_FILE
@@ -51,15 +52,22 @@ ashikhmin|drago|durand|fattal|pattanaik|reinhard02|reinhard05|mantiuk06|mantiuk0
 Tone mapping operator options. Legal values are:
 .IP
 alpha=VALUE:beta=VALUE:color=VALUE:noise=VALUE:new=true|false (for fattal)
+.br
 contrast=VALUE:saturation=VALUE:detail=VALUE:equalization=true|false (for mantiuk06)
+.br
 colorsaturation=VALUE:contrastenhancement=VALUE:luminancelevel=VALUE:setluminance=true|false (for mantiuk08)
+.br
 localcontrast=VALUE:eq=2|4:simple=true|false (for ashikhmin)
+.br
 sigma_s=VALUE:sigma_r=VALUE:base=VALUE (for durand)
+.br
 bias=VALUE (for drago)
+.br
 local=true|false:autolum=true|false:cone=VALUE:rod=VALUE:multiplier=VALUE (for pattanaik)
+.br
 scales=true|false:key=VALUE:phi=VALUE:num=VALUE:low=VALUE:high=VALUE (for reinhard02)
+.br
 brightness=VALUE:chroma=VALUE:lightness=VALUE (for reinhard05)
-(default is contrast=0.3:equalization=false:saturation=1.8, see also \fB\-o\fR)
 .TP
 \fB\-o\fR \fB\-\-output\fR LDR_FILE
 File name you want to save your tone mapped LDR to.
