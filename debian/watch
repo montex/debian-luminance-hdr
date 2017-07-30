@@ -1,4 +1,4 @@
 version=3
 
-opts=filenamemangle=s/.+\/v?\.?(\d\S+)\.tar\.gz/LuminanceHDR-$1\.tar\.gz/ \
+opts="filenamemangle=s/.+\/v?\.?(\d\S+)\.tar\.gz/LuminanceHDR-$1\.tar\.gz/,dversionmangle=s/\+dfsg//" \
   https://github.com/LuminanceHDR/LuminanceHDR/tags .*/v?\.?(\d\S+)\.tar\.gz

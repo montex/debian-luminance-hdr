@@ -1,4 +1,4 @@
-luminance-hdr (2.5.1-1) UNRELEASED; urgency=medium
+luminance-hdr (2.5.1+dfsg-1) UNRELEASED; urgency=medium
 
   [ Leonardo Montecchi ]
   * New upstream release
@@ -11,6 +11,7 @@ luminance-hdr (2.5.1-1) UNRELEASED; urgency=medium
 
   [ Andreas Metzler ]
   * Drop unused b-d on libqt5webkit5-dev.
+  * Repacked source -> use +dfsg version and set dvervsionmangle in watchfile.
 
  -- Leonardo Montecchi <lmontecchi@montex.org>  Sat, 29 Jul 2017 22:41:00 -0300
 
