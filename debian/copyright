@@ -1,224 +1,1052 @@
-Qtpfsgui was debianized by Cyril Brulebois
-<cyril.brulebois@enst-bretagne.fr> on Wed, 12 Dec 2007 23:45:44 +0100.
-After the rename to luminance-hdr it was taken over by Andreas Metzler
-and Leonardo Montecchi.
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Luminance HDR
+Upstream-Contact: Davide Anastasia <davideanastasia@users.sourceforge.net>
+                  Franco Comida <fcomida@users.sourceforge.net>
+                  Daniel Kaneider <danielkaneider@users.sourceforge.net>
+Source: https://github.com/LuminanceHDR/LuminanceHDR
+  Original source has been repacked to remove unused folder 'hdrhtml/hdrhtml_hdrlabs_templ/' containing
+  compiled .js without source
+Comment: Formerly qtpfsgui. Qtpfsgui was debianized by Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>
+  on Wed, 12 Dec 2007 23:45:44 +0100. After the rename to luminance-hdr it was taken over by Andreas
+  Metzler and Leonardo Montecchi.
 
-It was downloaded from <http://qtpfsgui.sourceforge.net/>
+Files: *
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
 
-Upstream Authors:
+Files: INSTALL
+Copyright: 2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
 
-  Main developer, improvements, bug fixing
-  Davide Anastasia (Lead Project Maintainer & Mac OS X support) <davideanastasia@users.sourceforge.net>
-  Franco Comida <fcomida@sourceforge.net>
-  Daniel Kaneider (windows setup, head of i18n efforts)
-  Bruce Guenter
+Files: build_files/Modules/FindOpenEXR.cmake
+Copyright: 2011, Blender Foundation.
+License: GPL-2+
 
-  Contributors:
-  Christian Raue (German Translator)
+Files: build_files/Modules/Findexiv2.cmake
+Copyright: 2010, Alexander Neundorf, <neundorf@kde.org>
+  2008, Gilles Caulier, <caulier.gilles@gmail.com>
+License: GPL-2+
 
-  Mandus (Norwegian translator)
-  Nicholas Phillips (MTB alignment code)
-  Mustafa GÜNAY (Turkish translator)
-  Douglas E. Warner (fc6 packager and bug reports)
-  Jan Gemela (Cezk translator)
-  Peter Gaal (Hungarian translator)
-  Ignacy Gawedzki (tiff ldr bugfixes and suggestion)
-  Bertrand Petit (FreeBSD patch)
-  Sloan Poe (found and fixed bug regarding legacy actions signal)
-  Alexandre Prokoudine (gui improvements, desktop integration)
-  Arne Hagenah (various suggestions)
-  Frank Boehme (various suggestions)
-  Erik Ouchterlony
-  Antoine Latter
-  Markus Schmaus (found and fixed bug in Debevec and Robertson02)
+Files: build_files/Modules/GetGitRevisionDescription.cmake
+  build_files/Modules/GetGitRevisionDescription.cmake.in
+Copyright: Iowa State University 2009-2010.
+License: BSL-1.0
 
-  Original author:
-  Giuseppe Rota <grota@sourceforge.net>
+Files: src/Alignment/*
+Copyright: 2009-2016, Franco Comida
+License: GPL-2+
 
+Files: src/Alignment/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
 
-Copyright:
+Files: src/BatchHDR/BatchHDRDialog.cpp
+  src/BatchHDR/BatchHDRDialog.h
+Copyright: 2009-2016, Franco Comida
+License: GPL-2+
 
-  Copyright (c) 2000 The NetBSD Foundation, Inc.
-  Copyright (C) 2002-2005 Nicholas Phillips
-  Copyright (C) 2002-2007 Nicholas Phillips
-  Copyright (C) 2003,2004,2005,2006,2007 Rafal Mantiuk and Grzegorz Krawczyk
-  Copyright (C) 2003,2004 Grzegorz Krawczyk
-  Copyright (C) 2003,2004 Rafal Mantiuk and Grzegorz Krawczyk
-  Copyright (C) 2003,2004 Rafal Mantiuk and Grzegorz Krawczyk, Alexander Efremov
-  Copyright (C) 2003-2007 Grzegorz Krawczyk
-  Copyright (C) 2003-2007 Rafal Mantiuk and Grzegorz Krawczyk
-  Copyright (C) 2003-2008 Rafal Mantiuk
-  Copyright (C) 2004 by Craig Bradney
-  Copyright (C) 2004 Grzegorz Krawczyk
-  Copyright (C) 2005-2007 Trolltech ASA. All rights reserved.
-  Copyright (C) 2005 by Petr Vanek
-  Copyright (C) 2006,2007,2008 Giuseppe Rota
-  Copyright (C) 2006-2007 Giuseppe Rota
-  Copyright (C) 2006,2007 Giuseppe Rota
-  Copyright (C) 2006-2008 Giuseppe Rota
-  Copyright (C) 2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
-  Copyright (C) 2006 Davide Anastasia
-  Copyright (C) 2006 Giuseppe Rota
-  Copyright (C) 2007 by Nicholas Phillips
-  Copyright (C) 2007 Giuseppe Rota
-  Copyright (C) 2007 Grzegorz Krawczyk
-  Copyright (c) 2007 John Resig (jquery.com)
-  Copyright (C) 2008,2007 Giuseppe Rota
-  Copyright (c) 2008, Gilles Caulier, <caulier.gilles@gmail.com>
-  Copyright (C) 2008 Giuseppe Rota
-  Copyright (C) 2009 Franco Comida
-  Copyright (C) 2010, 2011 Davide Anastasia
-  Copyright (C) 2010 Davide Anastasia
-  Copyright (C) 2010 Davide Anastasia (Luminance HDR)
-  Copyright (C) 2010 Elizabeth Oldham
-  Copyright (C) 2010 Franco Comida
-  Copyright (C) 2011 Davide Anastasia
-  Copyright (C) 2011 Franco Comida
-  Copyright (C) 2012 Davide Anastasia
-  Copyright (C) 2013 Davide Anastasia
-  Copyright (C) 2013 Franco Comida
-  Copyright Iowa State University 2009-2010.
-  Pierre Marchand <pierremarc@oep-h.com>, (C) 2008
+Files: src/BatchTM/BatchTMDialog.cpp
+  src/BatchTM/BatchTMDialog.h
+Copyright: 2006-2008, Giuseppe Rota
+License: GPL-2+
 
+Files: src/BatchTM/BatchTMJob.cpp
+  src/BatchTM/BatchTMJob.h
+Copyright: 2010-2014, Davide Anastasia
+License: GPL-2+
 
-License:
+Files: src/Common/*
+Copyright: 2010-2014, Davide Anastasia
+License: GPL-2+
 
- This program is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
+Files: src/Common/CMakeLists.txt
+  src/Common/SavedParametersDialog.ui
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
 
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
+Files: src/Common/CommonFunctions.cpp
+  src/Common/CommonFunctions.h
+  src/Common/ProgressHelper.cpp
+  src/Common/SavedParametersDialog.cpp
+  src/Common/SavedParametersDialog.h
+Copyright: 2009-2016, Franco Comida
+License: GPL-2+
 
- You should have received a copy of the GNU General Public License
- along with this program; if not, write to the Free Software
- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+Files: src/Common/LuminanceOptions.cpp
+  src/Common/LuminanceOptions.h
+  src/Common/config.h.in
+Copyright: 2010-2014, Davide Anastasia
+  2006, 2007, Giuseppe Rota
+License: GPL-2+
 
-On Debian systems, the complete text of the GNU General Public License
-version 2 can be found in “/usr/share/common-licenses/GPL-2”.
+Files: src/Common/ProgressHelper.h
+Copyright: 2012, 2013, Davide Anastasia
+  2009, 2012, Franco Comida
+License: GPL-2+
 
-The Debian packaging is licensed under the GPL, see above:
- © 2007-2008 Cyril Brulebois <kibi@debian.org>
+Files: src/Common/global.cpp
+Copyright: 2006-2008, Giuseppe Rota
+License: GPL-2+
 
+Files: src/Common/global.h
+Copyright: 2010-2012, Davide Anastasia, Franco Comida, Daniel Kaneider
+  2006, 2007, Giuseppe Rota
+License: GPL-2+
 
-Files: src/arch/msvc/getopt_win32.c
-Copyright: 2000 The NetBSD Foundation, Inc.
- * All rights reserved.
- * This code is derived from software contributed to The NetBSD Foundation
- * by Dieter Baron and Thomas Klausner.
-License: BSD-4-clause
-Comment: Not used in Linux build, therefore license incompatibilty with
- GPL is not an issue.
+Files: src/Core/*
+Copyright: 2010-2014, Davide Anastasia
+License: GPL-2+
 
-Files: src/arch/msvc/getopt_win32.h
-Copyright: 1987, 1993, 1994, 1996 The Regents of the University of
- California.
-License: BSD-4-clause
-Comment: Not used in Linux build, therefore license incompatibilty with
- GPL is not an issue.
+Files: src/Core/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
 
-Files: src/Libpfs/array2d.cpp src/Libpfs/array2d.h src/Libpfs/channel.cpp
- src/Libpfs/channel.h src/Libpfs/domio.cpp src/Libpfs/domio.h
- src/Libpfs/frame.cpp src/Libpfs/frame.h src/Libpfs/tag.cpp
- src/Libpfs/tag.h
-Copyright: Copyright (C) 2003,2004 Rafal Mantiuk and Grzegorz Krawczyk
- Copyright (C) 2011 Davide Anastasia
+Files: src/Exif/ExifOperations.cpp
+Copyright: 2013, Davide Anastasia
+  2010-2012, Franco Comida
+  2006, 2007, Giuseppe Rota
+License: GPL-2+
+
+Files: src/Exif/ExifOperations.h
+Copyright: 2006-2008, Giuseppe Rota
+License: GPL-2+
+
+Files: src/Fileformat/pfsoutldrimage.cpp
+Copyright: 2010-2014, Davide Anastasia
+  2006, 2007, Giuseppe Rota
+License: GPL-2+
+
+Files: src/Fileformat/pfsoutldrimage.h
+Copyright: 2006-2008, Giuseppe Rota
+License: GPL-2+
+
+Files: src/HdrCreation/*
+Copyright: 2010-2014, Davide Anastasia
+License: GPL-2+
+
+Files: src/HdrCreation/CMakeLists.txt
+  src/HdrCreation/weights.cpp
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/HdrCreation/createhdr.h
+Copyright: 2010-2014, Davide Anastasia
+  2006, 2007, Giuseppe Rota
+License: GPL-2+
+
+Files: src/HdrCreation/debevec.cpp
+  src/HdrCreation/debevec.h
+Copyright: 2017, Franco Comida
+  2013, Davide Anastasia
+  2006, 2007, Giuseppe Rota
+License: GPL-2+
+
+Files: src/HdrCreation/fusionoperator.cpp
+  src/HdrCreation/fusionoperator.h
+  src/HdrCreation/weights.h
+Copyright: 2010-2013, Davide Anastasia
 License: LGPL-2.1+
 
+Files: src/HdrCreation/mtb_alignment.cpp
+  src/HdrCreation/mtb_alignment.h
+Copyright: 2013, Davide Anastasia
+  2007, Nicholas Phillips
+License: GPL-2+
 
-Files: src/Libpfs/colorspace.cpp src/Libpfs/colorspace.h
- src/Libpfs/pfs.h 
-Copyright: Copyright (C) 2003,2004 Rafal Mantiuk and Grzegorz Krawczyk
+Files: src/HdrHTML/*
+Copyright: 2009, Rafal Mantiuk
+License: GPL-2+
+
+Files: src/HdrHTML/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/HdrHTML/hdrhtml-path.hxx.in
+Copyright: Franco Comida
+License: GPL-2+
+
+Files: src/HdrWizard/AutoAntighosting.cpp
+  src/HdrWizard/AutoAntighosting.h
+Copyright: 2009-2016, Franco Comida
+License: GPL-2+
+
+Files: src/HdrWizard/EditingTools.cpp
+  src/HdrWizard/EditingTools.h
+  src/HdrWizard/HdrCreationManager.h
+  src/HdrWizard/PreviewWidget.cpp
+  src/HdrWizard/PreviewWidget.h
+Copyright: 2006-2008, Giuseppe Rota
+License: GPL-2+
+
+Files: src/HdrWizard/HdrCreationItem.cpp
+  src/HdrWizard/HdrCreationItem.h
+Copyright: 2010-2014, Davide Anastasia
+License: GPL-2+
+
+Files: src/HdrWizard/HdrCreationManager.cpp
+Copyright: 2010-2012, Franco Comida
+  2006, 2007, Giuseppe Rota
+License: GPL-2+
+
+Files: src/HdrWizard/HdrWizard.cpp
+  src/HdrWizard/HdrWizard.h
+Copyright: 2013, Davide Anastasia
+  2010-2012, Franco Comida
+  2006, 2007, Giuseppe Rota
+License: GPL-2+
+
+Files: src/HelpBrowser/*
+Copyright: 2009-2016, Davide Anastasia, Franco Comida, Daniel Kaneider
+  2005-2007, Trolltech ASA.
+License: GPL-2+
+Comment: File taken from the example classes of the Qt Toolkit.
+
+Files: src/HelpBrowser/CMakeLists.txt
+  src/HelpBrowser/HelpBrowser.ui
+  src/HelpBrowser/HelpSideBar.ui
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/HelpBrowser/HelpSideBar.cpp
+  src/HelpBrowser/HelpSideBar.h
+  src/HelpBrowser/help-path.hxx.in
+Copyright: 2009-2016, Franco Comida
+License: GPL-2+
+
+Files: src/HelpBrowser/LuminancePaths.cpp
+Copyright: 2009, Franco Comida
+  2008, Pierre Marchand <pierremarc@oep-h.com>
+License: GPL-2+
+
+Files: src/HelpBrowser/LuminancePaths.h
+Copyright: 2009-2013, Davide Anastasia, Franco Comida, Daniel Kaneider
+  2008, Pierre Marchand <pierremarc@oep-h.com>
+License: GPL-2+
+
+Files: src/HelpBrowser/helpbrowser.cpp
+  src/HelpBrowser/helpbrowser.h
+Copyright: 2009-2016, Davide Anastasia, Franco Comida, Daniel Kaneider
+License: GPL-2+
+Comment: Copied from fontmatrix. Adapted to Luminance HDR.
+
+Files: src/HelpBrowser/sctextbrowser.cpp
+Copyright: 2001, â€“2013, Franz Schmid and rest of the members of the
+License: GPL-2+
+
+Files: src/HelpBrowser/sctextbrowser.h
+Copyright: 2001-2013, Franz Schmid and rest of the members of the
+License: GPL-2+
+
+Files: src/Libpfs/*
+Copyright: 2010-2014, Davide Anastasia
+License: GPL-2+
+
+Files: src/Libpfs/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/Libpfs/array2d.h
+  src/Libpfs/array2d.hxx
+  src/Libpfs/fixedstrideiterator.h
+  src/Libpfs/strideiterator.h
+Copyright: 2010-2013, Davide Anastasia
 License: LGPL-2.1+
 
+Files: src/Libpfs/channel.cpp
+  src/Libpfs/channel.h
+  src/Libpfs/frame.cpp
+  src/Libpfs/frame.h
+  src/Libpfs/tag.cpp
+  src/Libpfs/tag.h
+Copyright: 2010-2013, Davide Anastasia
+  2003, 2004, Rafal Mantiuk and Grzegorz Krawczyk
+License: LGPL-2.1+
 
+Files: src/Libpfs/channel.hxx
+Copyright: Davide Anastasia
+License: GPL-2+
 
-Files: src/HelpBrowser/schelptreemodel.cpp src/HelpBrowser/schelptreemodel.h
- src/HelpBrowser/treeitem.cpp src/HelpBrowser/treeitem.h
- src/HelpBrowser/treemodel.cpp src/HelpBrowser/treemodel.h
-Copyright: Copyright (C) 2005-2007 Trolltech ASA. All rights reserved.
-License: GPL-2.0
-Comment: These have been relicensed to 3-clause BSD in later QT releases.
+Files: src/Libpfs/colorspace/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
 
+Files: src/Libpfs/colorspace/colorspace.cpp
+Copyright: 2003, 2004, Rafal Mantiuk and Grzegorz Krawczyk
+License: LGPL-2.1+
 
-Files: src/TonemappingOperators/reinhard02/*
-Comment: Source code courtesy of Erik Reinhard
-  File taken from:
-  http://www.cs.utah.edu/~reinhard/cdrom/source.html
-  Port to PFS tools library by Grzegorz Krawczyk <krawczyk@mpi-sb.mpg.de>
+Files: src/Libpfs/colorspace/colorspace.h
+Copyright: 2010-2013, Davide Anastasia
+  2003, 2004, Rafal Mantiuk and Grzegorz Krawczyk
+License: LGPL-2.1+
+
+Files: src/Libpfs/colorspace/yuv.cpp
+  src/Libpfs/colorspace/yuv.h
+Copyright: 2009-2016, Franco Comida
+License: GPL-2+
+
+Files: src/Libpfs/exif/*
+Copyright: 2010-2013, Davide Anastasia
+License: LGPL-2.1+
+
+Files: src/Libpfs/exif/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/Libpfs/io/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/Libpfs/io/exrreader.cpp
+Copyright: 2012, 2013, Davide Anastasia
+  2003, 2004, Rafal Mantiuk and Grzegorz Krawczyk
+License: GPL-2+
+
+Files: src/Libpfs/io/exrwriter.cpp
+  src/Libpfs/io/exrwriter.h
+  src/Libpfs/io/rgbecommon.h
+  src/Libpfs/io/rgbereader.cpp
+  src/Libpfs/io/rgbereader.h
+  src/Libpfs/io/rgbewriter.cpp
+  src/Libpfs/io/rgbewriter.h
+  src/Libpfs/io/tiffwriter.cpp
+  src/Libpfs/io/tiffwriter.h
+Copyright: 2012, 2013, Davide Anastasia
+  2006-2008, Giuseppe Rota
+  2003-2007, Rafal Mantiuk and Grzegorz Krawczyk
+License: GPL-2+
+
+Files: src/Libpfs/io/fitsreader.cpp
+  src/Libpfs/io/fitsreader.h
+  src/Libpfs/io/rawreader.cpp
+  src/Libpfs/io/rawreader.h
+Copyright: 2009-2016, Franco Comida
+License: GPL-2+
+
+Files: src/Libpfs/io/jpegreader.cpp
+  src/Libpfs/io/jpegreader.h
+  src/Libpfs/io/jpegwriter.cpp
+  src/Libpfs/io/jpegwriter.h
+Copyright: 2012, Franco Comida
+  2012, 2013, Davide Anastasia
+License: GPL-2+
+
+Files: src/Libpfs/io/pngwriter.cpp
+  src/Libpfs/io/pngwriter.h
+Copyright: 2012, 2013, Davide Anastasia
+  2009, 2012, Franco Comida
+License: GPL-2+
+
+Files: src/Libpfs/manip/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/Libpfs/manip/cut.cpp
+Copyright: 2012, Davide Anastasia
+  2009, Franco Comida
+  2003, 2004, Rafal Mantiuk and Grzegorz Krawczyk
+License: GPL-2+
+
+Files: src/Libpfs/manip/cut.h
+Copyright: 2012, 2013, Davide Anastasia
+  2009, 2012, Franco Comida
+License: GPL-2+
+
+Files: src/Libpfs/manip/gamma.cpp
+  src/Libpfs/manip/gamma.h
+  src/Libpfs/manip/resize.cpp
+  src/Libpfs/manip/resize.h
+Copyright: 2012, 2013, Davide Anastasia
+  2003, 2004, Rafal Mantiuk and Grzegorz Krawczyk
+License: GPL-2+
+
+Files: src/Libpfs/manip/projection.cpp
+  src/Libpfs/manip/projection.h
+Copyright: 2012, 2013, Davide Anastasia
+  2006-2008, Giuseppe Rota
+  2003-2007, Rafal Mantiuk and Grzegorz Krawczyk
+License: GPL-2+
+
+Files: src/Libpfs/manip/rotate.cpp
+  src/Libpfs/manip/rotate.h
+Copyright: 2003-2007, Rafal Mantiuk and Grzegorz Krawczyk
+License: GPL-2+
+
+Files: src/Libpfs/manip/shift.cpp
+  src/Libpfs/manip/shift.h
+  src/Libpfs/manip/shift.hxx
+Copyright: 2010-2013, Davide Anastasia
+License: LGPL-2.1+
+
+Files: src/Libpfs/pfs.h
+Copyright: 2003, 2004, Rafal Mantiuk and Grzegorz Krawczyk
+License: LGPL-2.1+
+
+Files: src/Libpfs/tm/*
+Copyright: 2010-2014, Davide Anastasia
+  2006, 2007, Giuseppe Rota
+License: GPL-2+
+
+Files: src/Libpfs/tm/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/Libpfs/utils/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/Libpfs/utils/dotproduct.h
+  src/Libpfs/utils/dotproduct.hxx
+  src/Libpfs/utils/minmax.h
+  src/Libpfs/utils/minmax.hxx
+  src/Libpfs/utils/numeric.h
+  src/Libpfs/utils/numeric.hxx
+Copyright: 2010-2013, Davide Anastasia
+License: LGPL-2.1+
+
+Files: src/Libpfs/utils/msec_timer.cpp
+  src/Libpfs/utils/msec_timer.h
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/LibpfsAdditions/*
+Copyright: 2013, 2015, Daniel Kaneider
+License: GPL-2+
+
+Files: src/LibpfsAdditions/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/MainCli/*
+Copyright: 2006-2008, Giuseppe Rota
+License: GPL-2+
+
+Files: src/MainCli/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
 
 Files: src/MainCli/ezETAProgressBar.hpp
-Copyright: Copyright (C) 2011 Remik Ziemlinski
-License: GPL-3+
-Comment: File taken from ezProgressBar
+Copyright: 2011, Remik Ziemlinski
+License: LGPL-3+
+Comment: File from ezProgressBar
+ File from ezProgressBar
 
-Files: src/OsIntegration/ecwin7.cpp src/OsIntegration/ecwin7.h
-Copyright: Copyright (C) 2010 Emanuele Colombo
+Files: src/MainCli/main.cpp
+Copyright: 2010-2014, Davide Anastasia
+License: GPL-2+
+
+Files: src/MainGui/main.cpp
+Copyright: 2010-2014, Davide Anastasia
+  2006, 2007, Giuseppe Rota
+License: GPL-2+
+
+Files: src/MainWindow/DnDOption.cpp
+  src/MainWindow/DnDOption.h
+  src/MainWindow/UpdateChecker.cpp
+  src/MainWindow/UpdateChecker.h
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/MainWindow/DonationDialog.cpp
+  src/MainWindow/DonationDialog.h
+Copyright: 2010-2014, Davide Anastasia
+License: GPL-2+
+
+Files: src/MainWindow/MainWindow.cpp
+  src/MainWindow/MainWindow.h
+Copyright: 2010-2014, Davide Anastasia
+  2006, 2007, Giuseppe Rota
+License: GPL-2+
+
+Files: src/OsIntegration/*
+Copyright: 2006-2008, Giuseppe Rota
+License: GPL-2+
+
+Files: src/OsIntegration/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/OsIntegration/ecwin7.cpp
+  src/OsIntegration/ecwin7.h
+Copyright: 2010, Emanuele Colombo
 License: GPL-2+
 Comment: EcWin7 - Support library for integrating Windows 7 taskbar features
 
+Files: src/Preferences/PreferencesDialog.cpp
+  src/Preferences/PreferencesDialog.h
+Copyright: 2006-2008, Giuseppe Rota
+License: GPL-2+
+
+Files: src/PreviewPanel/*
+Copyright: 2009-2016, Franco Comida
+License: GPL-2+
+
+Files: src/PreviewPanel/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/PreviewSettings/*
+Copyright: 2009-2016, Franco Comida
+License: GPL-2+
+
+Files: src/PreviewSettings/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/Projection/ProjectionsDialog.cpp
+  src/Projection/ProjectionsDialog.h
+Copyright: 2006-2008, Giuseppe Rota
+License: GPL-2+
+
+Files: src/Resize/ResizeDialog.cpp
+  src/Resize/ResizeDialog.h
+Copyright: 2006-2008, Giuseppe Rota
+License: GPL-2+
+
+Files: src/TonemappingOperators/*
+Copyright: 2003, 2004, 2007, Grzegorz Krawczyk
+License: GPL-2+
+
+Files: src/TonemappingOperators/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/TonemappingOperators/ashikhmin02/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/TonemappingOperators/drago03/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/TonemappingOperators/durand02/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/TonemappingOperators/fattal02/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
 Files: src/TonemappingOperators/fattal02/pde_fft.cpp
-Copyright: Tino Kluge (tino.kluge@hrz.tu-chemnitz.de)
-License: GPL-2+
-Comment: License header added in upstream GIT post 2.3.0.
-
-Files: src/UI/FlowLayout.h  src/UI/FlowLayout.cpp
-Copyright: 2011 Nokia Corporation and/or its subsidiary(-ies).
-License: BSD-3-clause
-
-Files: src/HelpBrowser/sctextbrowser.cpp src/HelpBrowser/sctextbrowser.h
-Copyright: 2001–2013 Franz Schmid and rest of the members of the
- Scribus Team.
- The "Scribus Team" is informally defined as the following people: Franz
- Schmid, Peter Linnell, Craig Bradney, Jean Ghali, Hermann Kraus, Riku
- Leino, Oleksandr M oskalenko, Christoph Schäfer, Petr Vaněk, Andreas
- Vox, and Jain Basil.
-License: GPL-2+_qt3
-
-Files: src/TonemappingOperators/mantiuk08/cqp/*
-Copyright: 2006-2008 Ewgenij Hübner
+Copyright: 2012, Tino Kluge
 License: GPL-2+
 
-Files: cmake/FindCCfits.cmake
-Copyright: (c) 2012 Brian Kloppenborg
-License: GPL-3+
+Files: src/TonemappingOperators/ferradans11/*
+Copyright: 2013, This file is a part of LuminanceHDR package, based on pfstmo.
+License: GPL-2+
 
-Files: cmake/FindCFITSIO.cmake
-Copyright: (c) 2006, Jasem Mutlaq <mutlaqja@ikarustech.com>
- Based on FindLibfacile by Carsten Niehaus, <cniehaus@gmx.de>
+Files: src/TonemappingOperators/ferradans11/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/TonemappingOperators/ferradans11/pfstmo_ferradans11.cpp
+Copyright: 2013, Sira Ferradans
+License: GPL-2+
+
+Files: src/TonemappingOperators/mai11/*
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/TonemappingOperators/mai11/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/TonemappingOperators/mantiuk06/*
+Copyright: 2010-2014, Davide Anastasia
+License: GPL-2+
+
+Files: src/TonemappingOperators/mantiuk06/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/TonemappingOperators/mantiuk06/contrast_domain.cpp
+Copyright: 2010-2012, Davide Anastasia
+  2007, Grzegorz Krawczyk
+License: GPL-2+
+
+Files: src/TonemappingOperators/mantiuk06/contrast_domain.h
+  src/TonemappingOperators/mantiuk06/pfstmo_mantiuk06.cpp
+Copyright: 2003, 2004, 2007, Grzegorz Krawczyk
+License: GPL-2+
+
+Files: src/TonemappingOperators/mantiuk08/*
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/TonemappingOperators/mantiuk08/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/TonemappingOperators/mantiuk08/cqp/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/TonemappingOperators/pattanaik00/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/TonemappingOperators/pfstmdefaultparams.h
+Copyright: 2010-2014, Davide Anastasia
+License: GPL-2+
+
+Files: src/TonemappingOperators/pfstmo.h
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/TonemappingOperators/reinhard05/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/TonemappingPanel/*
+Copyright: 2009-2016, Franco Comida
+License: GPL-2+
+
+Files: src/TonemappingPanel/CMakeLists.txt
+  src/TonemappingPanel/SavingParametersDialog.ui
+  src/TonemappingPanel/ThresholdWidget.ui
+  src/TonemappingPanel/TonemappingPanel.ui
+  src/TonemappingPanel/TonemappingSettings.ui
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/TonemappingPanel/TonemappingPanel.cpp
+  src/TonemappingPanel/TonemappingPanel.h
+Copyright: 2006-2008, Giuseppe Rota
+License: GPL-2+
+
+Files: src/TransplantExif/TransplantExifDialog.cpp
+  src/TransplantExif/TransplantExifDialog.h
+Copyright: 2006-2008, Giuseppe Rota
+License: GPL-2+
+
+Files: src/UI/*
+Copyright: 2009-2016, Franco Comida
+License: GPL-2+
+
+Files: src/UI/CMakeLists.txt
+  src/UI/ExportToHtmlDialog.ui
+  src/UI/ExtWizardPage.cpp
+  src/UI/ExtWizardPage.h
+  src/UI/FitsImporter.ui
+  src/UI/GammaAndLevels.ui
+  src/UI/ImageQualityDialog.ui
+  src/UI/SupportedCamerasDialog.ui
+  src/UI/TiffModeDialog.ui
+  src/UI/about.ui
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/UI/FlowLayout.cpp
+  src/UI/FlowLayout.h
+Copyright: 2011, Nokia Corporation and/or its subsidiary(-ies).
 License: BSD-3-clause
 
-Files: cmake/FindOpenEXR.cmake
-Copyright: 2011 Blender Foundation.
+Files: src/UI/GammaAndLevels.cpp
+  src/UI/GammaAndLevels.h
+  src/UI/Gang.h
+Copyright: 2006-2008, Giuseppe Rota
+License: GPL-2+
+
+Files: src/UI/Gang.cpp
+Copyright: 2006, 2007, Giuseppe Rota
+  2002-2005, Nicholas Phillips
+License: GPL-2+
+
+Files: src/UI/TiffModeDialog.cpp
+  src/UI/TiffModeDialog.h
+  src/UI/UMessageBox.cpp
+  src/UI/UMessageBox.h
+Copyright: 2010-2014, Davide Anastasia
+License: GPL-2+
+
+Files: src/Viewers/*
+Copyright: 2010-2014, Davide Anastasia
+License: GPL-2+
+
+Files: src/Viewers/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/Viewers/GenericViewer.cpp
+Copyright: 2009-2012, Franco Comida, Davide Anastasia
+License: GPL-2+
+
+Files: src/Viewers/GenericViewer.h
+Copyright: 2009-2016, Franco Comida
+License: GPL-2+
+
+Files: src/Viewers/HdrViewer.cpp
+  src/Viewers/LdrViewer.cpp
+  src/Viewers/LdrViewer.h
+  src/Viewers/PanIconWidget.cpp
+  src/Viewers/PanIconWidget.h
+Copyright: 2006-2008, Giuseppe Rota
+License: GPL-2+
+
+Files: src/Viewers/HdrViewer.h
+Copyright: 2010-2014, Davide Anastasia
+  2006, 2007, Giuseppe Rota
+License: GPL-2+
+
+Files: src/Viewers/Histogram.cpp
+  src/Viewers/Histogram.h
+  src/Viewers/LuminanceRangeWidget.cpp
+  src/Viewers/LuminanceRangeWidget.h
+Copyright: 2003-2007, Rafal Mantiuk and Grzegorz Krawczyk
+License: GPL-2+
+
+Files: src/arch/*
+Copyright: 2006-2008, Giuseppe Rota
+License: GPL-2+
+
+Files: src/arch/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: src/arch/math.h
+Copyright: 2010-2012, Daniel Kaneider, Davide Anastasia
+  2006-2008, Giuseppe Rota
+License: GPL-2+
+
+Files: src/contrib/qtwaitingspinner/*
+Copyright: 2012-2014, Alexander Turkin
+License: Expat
+
+Files: src/contrib/qtwaitingspinner/CMakeLists.txt
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: test/*
+Copyright: 2010-2014, Davide Anastasia
+License: GPL-2+
+
+Files: test/CMakeLists.txt
+  test/TestConvertSample.cpp
+  test/TestFusionOperator.cpp
+  test/TestHdrCreationWizard.cpp
+  test/TestMTB.cpp
+  test/TestMinMax.cpp
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: test/FusionAlgorithms/*
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: test/ImageInspector/*
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: test/ImageInspector/ImageInspectorMain.cpp
+Copyright: 2010-2014, Davide Anastasia
+License: GPL-2+
+
+Files: test/InputOutputTest/*
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: test/TestPoissonSolver.cpp
+Copyright: 2009-2016, Franco Comida
+License: GPL-2+
+
+Files: test/WhiteBalance/*
+Copyright: 2010-2017, Davide Anastasia <davideanastasia@users.sourceforge.net>
+  2010-2017, Franco Comida <fcomida@users.sourceforge.net>
+  2010-2017, Daniel Kaneider <danielkaneider@users.sourceforge.net>
+  and many contributors and translators
+  2006-2010, Giuseppe Rota <grota@users.sourceforge.net>
+License: GPL-2+
+
+Files: test/WhiteBalance/WhiteBalanceMain.cpp
+Copyright: 2009-2016, Franco Comida
+License: GPL-2+
+
+Files: test/mantiuk06/*
+Copyright: 2003, 2004, 2007, Grzegorz Krawczyk
+License: GPL-2+
+
 License: BSD-3-clause
+ You may use this file under the terms of the BSD license as follows:
+ .
+ "Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are
+ met:
+   * Redistributions of source code must retain the above copyright
+     notice, this list of conditions and the following disclaimer.
+   * Redistributions in binary form must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in
+     the documentation and/or other materials provided with the
+     distribution.
+   * Neither the name of Nokia Corporation and its Subsidiary(-ies) nor
+     the names of its contributors may be used to endorse or promote
+     products derived from this software without specific prior written
+     permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
 
+License: Expat
+ The MIT License
+ .
+ Permission is hereby granted, free of charge, to any person
+ obtaining a copy of this software and associated
+ documentation files (the "Software"), to deal in the Software
+ without restriction, including without limitation the rights to
+ use, copy, modify, merge, publish, distribute, sublicense,
+ and/or sell copies of the Software, and to permit persons to
+ whom the Software is furnished to do so, subject to the
+ following conditions:
+ .
+ The above copyright notice and this permission notice shall
+ be included in all copies or substantial portions of the
+ Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT
+ WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+ INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR
+ PURPOSE AND NONINFRINGEMENT. IN NO EVENT
+ SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ CONNECTION WITH THE SOFTWARE OR THE USE OR
+ OTHER DEALINGS IN THE SOFTWARE.
 
-License: GPL-2+_qt3
+License: GPL-2+
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
+ the Free Software Foundation; version 2 dated June, 1991, or (at
+ your option) any later version.
  .
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
+ On Debian systems, the complete text of version 2 of the GNU General
+ Public License can be found in '/usr/share/common-licenses/GPL-2'.
+
+License: LGPL-2.1+
+ This program is free software; you can redistribute it and/or modify it
+ under the terms of the GNU Lesser General Public License as published by the
+ Free Software Foundation; version 2.1 of the License, or (at
+ your option) any later version.
  .
- You should have received a copy of the GNU General Public License
- along with this program; if not, see <http://www.gnu.org/licenses/>
+ On Debian systems, the complete text of version 2.1 of the GNU Lesser
+ General Public License can be found in `/usr/share/common-licenses/LGPL-2.1'.
+
+License: LGPL-3+
+ This program is free software; you can redistribute it and/or modify it
+ under the terms of the GNU Lesser General Public License as published by the
+ Free Software Foundation; version 3 of the License, or (at
+ your option) any later version.
  .
- In addition, as a special exception, the listed copyright holders above
- give permission to link the code of this program with the Trolltech AS
- Qt4 Commercially Licensed Dynamic Link Libraries  (or with modified
- versions of Trolltech AS Qt3 Commercially Licensed Dynamic Link
- Libraries that use the same license as Trolltech AS Qt4 Commercially
- Licensed Dynamic Link Libraries), and distribute linked combinations
- including the two. You must obey the GNU General Public  License in all
- respects for all of the code used other than Trolltech AS Qt3
- Commercially Licensed Dynamic Link Libraries.  If you modify this file,
- you may extend this exception to your version of the file, but you are
- not obligated to do so. If you do not wish to do so, delete this
- exception statement from your version.
+ On Debian systems, the complete text of version 3 of the GNU Lesser
+ General Public License can be found in `/usr/share/common-licenses/LGPL-3'.
+
+License: BSL-1.0
+ Permission is hereby granted, free of charge, to any person or organization
+ obtaining a copy of the software and accompanying documentation covered by
+ this license (the "Software") to use, reproduce, display, distribute, execute,
+ and transmit the Software, and to prepare derivative works of the Software,
+ and to permit third-parties to whom the Software is furnished to do so, all
+ subject to the following:
+ .
+ The copyright notices in the Software and this entire statement, including the
+ above license grant, this restriction and the following disclaimer, must be
+ included in all copies of the Software, in whole or in  part, and all
+ derivative works of the Software, unless such copies or derivative works are
+ solely in the form of machine-executable object code generated by a source
+ language processor.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT SHALL
+ THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE FOR ANY
+ DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE, ARISING
+ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ IN THE SOFTWARE.
