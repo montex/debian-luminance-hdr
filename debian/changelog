@@ -1,8 +1,14 @@
 luminance-hdr (2.5.1-1) UNRELEASED; urgency=medium
 
   * New upstream release
+  * Repack sources to remove unused folder 'hdrhtml/hdrhtml_hdrlabs_templ/'
+    containing compiled .js without source
+  * Add get-orig-source target to debian/rules
+  * 60_hdrhtml_locale.diff: Fix locale issue in export to HTML feature
+  * Update 20_usrsharedoc.diff: Revert putting the hdrhtml folder under
+    /usr/doc as it is not part of the documentation
 
- -- Leonardo Montecchi <lmontecchi@montex.org>  Tue, 16 May 2017 00:33:21 +0200
+ -- Leonardo Montecchi <lmontecchi@montex.org>  Sat, 29 Jul 2017 22:41:00 -0300
 
 luminance-hdr (2.4.0-9) unstable; urgency=medium
 
