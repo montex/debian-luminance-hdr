@@ -1,5 +1,6 @@
 luminance-hdr (2.5.1-1) UNRELEASED; urgency=medium
 
+  [ Leonardo Montecchi ]
   * New upstream release
   * Repack sources to remove unused folder 'hdrhtml/hdrhtml_hdrlabs_templ/'
     containing compiled .js without source
@@ -7,6 +8,9 @@ luminance-hdr (2.5.1-1) UNRELEASED; urgency=medium
   * 60_hdrhtml_locale.diff: Fix locale issue in export to HTML feature
   * Update 20_usrsharedoc.diff: Revert putting the hdrhtml folder under
     /usr/doc as it is not part of the documentation
+
+  [ Andreas Metzler ]
+  * Drop unused b-d on libqt5webkit5-dev.
 
  -- Leonardo Montecchi <lmontecchi@montex.org>  Sat, 29 Jul 2017 22:41:00 -0300
 
