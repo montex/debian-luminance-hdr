@@ -25,22 +25,23 @@ export QT_SELECT := qt5
 PKD  = $(abspath $(dir $(MAKEFILE_LIST)))
 PKG  = $(shell dpkg-parsechangelog -S source --file $(PKD)/changelog)
 VER ?= $(shell dpkg-parsechangelog -l$(PKD)/changelog | perl -ne 'print $$1 if m{^Version:\s+(?:\d+:)?(\d.*)(?:\-\d+.*)};')
+UVER = $(subst +dfsg,,$(VER))
 
 .PHONY: get-orig-source
 ## http://wiki.debian.org/onlyjob/get-orig-source
 get-orig-source:
 	$(info I: $(PKG)_$(VER))
 	@echo "# Downloading..."
-	uscan --noconf --verbose --rename --destdir=$(CURDIR) --check-dirname-level=0 --force-download --download-version $(VER) $(PKD)
+	uscan --noconf --verbose --rename --destdir=$(CURDIR) --check-dirname-level=0 --force-download --download-version $(UVER) $(PKD)
 	$(if $(wildcard $(PKG)-$(VER)),$(error $(PKG)-$(VER) exist, aborting..))
 	@echo "# Extracting..."
 	mkdir $(PKG)-$(VER)
-	tar -xf $(PKG)_$(VER).orig.tar.* --directory $(PKG)-$(VER)
+	tar -xf $(PKG)_$(UVER).orig.tar.* --directory $(PKG)-$(VER)
 	@echo "# Cleaning-up..."
 	cd $(PKG)-$(VER) && \
-	$(RM) -r -v LuminanceHDR-v.$(VER)/hdrhtml/hdrhtml_hdrlabs_templ/
+	$(RM) -r -v LuminanceHDR-v.$(UVER)/hdrhtml/hdrhtml_hdrlabs_templ/
 	@echo "# Repacking..."
-	tar -caf "$(PKG)_$(VER)$(DTYPE).orig.tar.gz" --directory $(PKG)-$(VER) LuminanceHDR-v.$(VER)
+	tar -caf "$(PKG)_$(VER)$(DTYPE).orig.tar.gz" --directory $(PKG)-$(VER) LuminanceHDR-v.$(UVER)
 	rm -r -v $(PKG)-$(VER)
 
 override_dh_auto_build:

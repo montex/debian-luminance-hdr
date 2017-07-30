@@ -12,6 +12,7 @@ luminance-hdr (2.5.1+dfsg-1) UNRELEASED; urgency=medium
   [ Andreas Metzler ]
   * Drop unused b-d on libqt5webkit5-dev.
   * Repacked source -> use +dfsg version and set dvervsionmangle in watchfile.
+  * Handle +dfsg suffix in get-orig-source target.
 
  -- Leonardo Montecchi <lmontecchi@montex.org>  Sat, 29 Jul 2017 22:41:00 -0300
 
