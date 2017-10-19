@@ -1,4 +1,4 @@
-luminance-hdr (2.5.1+dfsg-1) UNRELEASED; urgency=medium
+luminance-hdr (2.5.1+dfsg-1) experimental; urgency=low
 
   [ Leonardo Montecchi ]
   * New upstream release
@@ -14,8 +14,9 @@ luminance-hdr (2.5.1+dfsg-1) UNRELEASED; urgency=medium
   * Repacked source -> use +dfsg version and set dvervsionmangle in watchfile.
   * Handle +dfsg suffix in get-orig-source target.
   * Use xz compression for repacked source.
+  * Drop qtpfsgui transition package. Closes: #878689
 
- -- Leonardo Montecchi <lmontecchi@montex.org>  Sat, 29 Jul 2017 22:41:00 -0300
+ -- Andreas Metzler <ametzler@debian.org>  Thu, 19 Oct 2017 19:34:05 +0200
 
 luminance-hdr (2.4.0-9) unstable; urgency=medium
 
