@@ -1,6 +1,6 @@
 Source: luminance-hdr
 Section: graphics
-Priority: extra
+Priority: optional
 Maintainer: Debian PhotoTools Maintainers <pkg-phototools-devel@lists.alioth.debian.org>
 Uploaders: Andreas Metzler <ametzler@debian.org>,
  Leonardo Montecchi <lmontecchi@montex.org>
