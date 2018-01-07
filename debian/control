@@ -10,7 +10,7 @@ Build-Depends: cmake (>= 2.8.11), debhelper (>= 9), libboost-dev,
  libraw-dev, libtiff-dev, pkg-config, qtbase5-dev,
  qtdeclarative5-dev, qtscript5-dev,
  qttools5-dev (>= 5.2.1-7), qttools5-dev-tools,
- qtwebengine5-dev, libboost-thread-dev, libboost-chrono-dev,
+ libqt5webkit5-dev, libboost-thread-dev, libboost-chrono-dev,
  libboost-system-dev, libboost-date-time-dev, libqt5svg5-dev
 Standards-Version: 4.1.1
 Homepage: http://qtpfsgui.sourceforge.net/
