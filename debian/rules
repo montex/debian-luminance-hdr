@@ -9,6 +9,8 @@ export DEB_BUILD_MAINT_OPTIONS=hardening=+all
 export DEB_LDFLAGS_MAINT_APPEND=-Wl,--as-needed
 export QT_SELECT := qt5
 
+include /usr/share/dpkg/pkg-info.mk
+
 # To enable test-suite build-depend on libgtest-dev and uncomment these lines
 ###override_dh_auto_configure:
 ###	cp -a /usr/src/gtest local-gtest && \

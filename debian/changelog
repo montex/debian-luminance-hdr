@@ -1,3 +1,10 @@
+luminance-hdr (2.5.1+dfsg-3) unstable; urgency=low
+
+  * Upload to unstable.
+  * [lintian] Drop trailing whitespace in changelog.
+
+ -- Andreas Metzler <ametzler@debian.org>  Sat, 10 Feb 2018 14:19:41 +0100
+
 luminance-hdr (2.5.1+dfsg-2) experimental; urgency=medium
 
   [ Andreas Metzler ]
@@ -161,7 +168,7 @@ luminance-hdr (2.2.1-2) experimental; urgency=low
   * Added patch from upstream code, fixes compilation on non-x86
     architectures:
      - 30_fix_build_non_x86
-     
+
  -- Andreas Metzler <ametzler@debian.org>  Fri, 25 May 2012 20:13:41 +0200
 
 luminance-hdr (2.2.1-1) experimental; urgency=low
