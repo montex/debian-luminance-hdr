@@ -1,3 +1,4 @@
+01_checkbuildtype.diff
 05_upstream_qtwebkit.patch
 20_usrsharedoc.diff
 50_fix_build_kfreebsd-amd64.diff

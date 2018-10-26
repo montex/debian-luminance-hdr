@@ -1,0 +1,8 @@
+--- a/build_files/Modules/GlobalSettings.cmake
++++ b/build_files/Modules/GlobalSettings.cmake
+@@ -1,4 +1,4 @@
+-IF(NOT CMAKE_BUILD_TYPE)
++IF(NOT CMAKE_BUILD_TYPE OR ${CMAKE_BUILD_TYPE} STREQUAL "None")
+ SET(CMAKE_BUILD_TYPE "RelWithDebInfo" CACHE STRING "" FORCE)
+ ENDIF()
+ 

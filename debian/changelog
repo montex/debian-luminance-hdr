@@ -1,3 +1,9 @@
+luminance-hdr (2.5.1+dfsg-4) UNRELEASED; urgency=medium
+
+  * 01_checkbuildtype.diff: Check for "None" build type
+
+ -- Leonardo Montecchi <lmontecchi@montex.org>  Fri, 26 Oct 2018 18:30:46 -0300
+
 luminance-hdr (2.5.1+dfsg-3) unstable; urgency=low
 
   * Upload to unstable.
